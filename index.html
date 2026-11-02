@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KLR Lernplattform</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&family=Anton&family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Alegreya+Sans:wght@400;700&family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&family=Anton&family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Alegreya+Sans:wght@400;700&family=Caveat:wght@600;700&family=Bangers&family=Pacifico&family=Press+Start+2P&display=swap">
 <style>html{color-scheme:dark}body{margin:0;background:#06112f;color:#eef2ff;padding:18px 16px 70px}</style>
 </head>
 <body>
@@ -450,6 +450,184 @@ color-scheme:dark;font-family:var(--fb);font-size:16px;line-height:1.55;color:va
 #uf .m2-r{color:#8f6918}
 @media (max-width:520px){#uf .pkcards .flip{width:min(250px,84vw)}#uf .pkcards .flip .rc{--w:min(250px,84vw)}#uf .binder{grid-template-columns:repeat(2,1fr)}}
 @media (prefers-reduced-motion:reduce){#uf .rc-holo{animation:none}}
+/* Helpy-Werkstatt */
+#uf .helpy .hp-panel,#uf .helpy-demo .hp-panel{font-size:var(--hpfs,.92em)}
+#uf .hpw-prev{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin:0 0 14px;padding:16px;border-radius:16px;background:radial-gradient(circle at 15% 80%,rgba(60,196,240,.18),transparent 60%),var(--s1);border:1px solid var(--line)}
+#uf .hpw-av{width:112px;height:112px;flex:0 0 auto;border-radius:50%;padding:10px;background:#0f2a7a;border:3px solid var(--ac);box-shadow:0 8px 20px rgba(0,0,0,.45)}
+#uf .hpw-av svg,#uf .hpw-mini svg{width:100%;height:100%;display:block}
+#uf .helpy-demo{flex:1 1 260px;min-width:0}
+#uf .helpy-demo .hp-panel{width:auto;max-height:none;overflow:visible}
+#uf .helpy-demo.mini{width:100%;flex:0 0 auto}
+#uf .helpy-demo.mini .hp-panel{font-size:.74em;padding:7px 10px;text-align:left}
+#uf .helpy-demo.mini .hp-say p{margin:.15em 0}
+#uf .hpw-mini{width:84px;height:84px}
+#uf .hpw-fs{min-height:84px;display:flex;align-items:center;justify-content:center;font-weight:600;text-align:center;line-height:1.2}
+/* Sprechblasen-Stile */
+#uf .bs-paper .hp-panel{background:repeating-linear-gradient(180deg,transparent 0 21px,rgba(80,120,180,.16) 21px 22px),#f6ecd2;color:#3a2a14;border:2px solid #3a2a14;font-family:"Alegreya Sans",Barlow,sans-serif;box-shadow:3px 4px 0 rgba(58,42,20,.5)}
+#uf .bs-paper .hp-head b{font-family:Fraunces,Georgia,serif;color:#9e231b}
+#uf .bs-paper .hp-box{background:#fffaf0;border-color:#c9a978;color:#3a2a14}
+#uf .bs-paper .hp-face{background:#f6ecd2;border-color:#3a2a14}
+#uf .bs-pastel .hp-panel{background:linear-gradient(135deg,#ffe3f0,#e6e0ff);color:#3a2450;border:2px solid #c9a8ff;border-radius:22px 22px 22px 6px}
+#uf .bs-pastel .hp-head b{color:#b04a8a}
+#uf .bs-pastel .hp-box{background:#fff;border-color:#e3c8ff;color:#3a2450}
+#uf .bs-pastel .hp-face{background:#ffe3f0;border-color:#c9a8ff}
+#uf .bs-comic .hp-panel{background:#fff;color:#111;border:3px solid #111;border-radius:20px 20px 20px 0;box-shadow:5px 5px 0 #111;font-weight:600}
+#uf .bs-comic .hp-head b{font-family:Caveat,cursive;font-size:1.6em;color:#e23b4a}
+#uf .bs-comic .hp-box{background:#fffbe0;border:2px solid #111;color:#111}
+#uf .bs-comic .hp-face{background:#fff;border:3px solid #111}
+#uf .bs-chalk .hp-panel{background:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.5px) 0 0/5px 5px,#2f4a3a;color:#f2f2e8;border:7px solid #8a5a35;border-radius:6px;font-family:Caveat,cursive;font-size:calc(var(--hpfs,.92em) * 1.25)}
+#uf .bs-chalk .hp-head b{color:#ffe680;font-family:Caveat,cursive;font-size:1.3em}
+#uf .bs-chalk .hp-box{background:rgba(255,255,255,.07);border:1.5px dashed rgba(255,255,255,.45);color:#f2f2e8;font-family:Caveat,cursive;font-size:1em}
+#uf .bs-chalk .hp-face{background:#2f4a3a;border-color:#8a5a35}
+#uf .bs-term .hp-panel{background:#050805;color:#7dff9a;border:1px solid #2fbf55;border-radius:4px;font-family:var(--fm);box-shadow:0 0 14px rgba(47,191,85,.35)}
+#uf .bs-term .hp-head b{color:#7dff9a;font-family:var(--fm)}
+#uf .bs-term .hp-head b:before{content:"> "}
+#uf .bs-term .hp-box{background:#0b140b;border-color:#2fbf55;color:#b8ffc8}
+#uf .bs-term .hp-face{background:#050805;border-color:#2fbf55}
+#uf .bs-neon .hp-panel{background:#12002a;color:#f5e9ff;border:2px solid #ff4fd8;box-shadow:0 0 10px #ff4fd8,0 0 26px rgba(127,217,247,.5),inset 0 0 14px rgba(255,79,216,.3)}
+#uf .bs-neon .hp-head b{color:#7fd9f7;text-shadow:0 0 6px #7fd9f7}
+#uf .bs-neon .hp-box{background:#1d0640;border-color:#7fd9f7}
+#uf .bs-neon .hp-face{background:#12002a;border-color:#ff4fd8;box-shadow:0 0 12px #ff4fd8}
+#uf .bs-gold .hp-panel{background:linear-gradient(160deg,#2a2208,#4a3a10);color:#fff6dc;border:3px solid #ffd23f;box-shadow:inset 0 0 0 2px #8f6918,0 10px 30px rgba(0,0,0,.5)}
+#uf .bs-gold .hp-head b{color:#ffd23f;font-family:Fraunces,Georgia,serif}
+#uf .bs-gold .hp-box{background:rgba(0,0,0,.3);border-color:#c9a24a}
+#uf .bs-gold .hp-face{background:#2a2208;border-color:#ffd23f;box-shadow:0 0 0 2px #8f6918,0 8px 20px rgba(0,0,0,.45)}
+#uf .bs-paper .hp-acts button,#uf .bs-pastel .hp-acts button,#uf .bs-comic .hp-acts button{background:#2a1c0a;color:#fff6dc;border-color:#2a1c0a}
+#uf .bs-term .hp-acts button{background:#0b140b;color:#7dff9a;border:1px solid #2fbf55}
+#uf .bs-paper .hp-say b,#uf .bs-pastel .hp-say b,#uf .bs-comic .hp-say b{color:inherit}
+#uf .hf .hp-panel,#uf .hf .hp-panel .hp-box,#uf .hf .hp-head b,#uf .hf .hp-acts button{font-family:var(--hpff)!important}
+#uf .hf-hand .hp-panel{font-size:calc(var(--hpfs,.92em) * 1.22)!important}
+#uf .hf-hand .hp-panel .hp-box{font-size:1em}
+#uf button.hpw-av{cursor:pointer;font:inherit;color:inherit}
+#uf .helpy,#uf .hpw-prev{position:relative}
+#uf .helpy{position:fixed}
+#uf .dance .hp-face,#uf .hpw-prev.dance .hpw-av{animation:hpDance .42s ease-in-out infinite alternate}
+#uf .dance .hp-bob{animation:hpDanceB .21s ease-in-out infinite alternate}
+@keyframes hpDance{0%{transform:rotate(-14deg) translateY(0) scale(1)}100%{transform:rotate(14deg) translateY(-10px) scale(1.07)}}
+@keyframes hpDanceB{to{transform:translateY(-3px) scaleY(.95)}}
+#uf .hp-notes{position:absolute;left:10px;bottom:60px;width:90px;height:10px;pointer-events:none}
+#uf .hpw-prev .hp-notes{left:40px;bottom:auto;top:30px}
+#uf .hp-notes i{position:absolute;bottom:0;font-style:normal;font-size:22px;color:var(--gold);text-shadow:0 2px 4px rgba(0,0,0,.5);animation:hpNote 1.6s ease-out forwards;opacity:0}
+#uf .hp-notes i:nth-child(2){left:26px;animation-delay:.3s;color:var(--ac)}
+#uf .hp-notes i:nth-child(3){left:52px;animation-delay:.6s;color:#ff8fb4}
+#uf .hp-notes i:nth-child(4){left:14px;animation-delay:.9s;color:var(--ok)}
+@keyframes hpNote{0%{opacity:0;transform:translateY(0) rotate(0)}20%{opacity:1}100%{opacity:0;transform:translateY(-70px) rotate(25deg)}}
+@media (prefers-reduced-motion:reduce){#uf .dance .hp-face,#uf .hpw-prev.dance .hpw-av,#uf .dance .hp-bob{animation:none}}
+/* Helpy: weitere Stile */
+#uf .hp-voice{margin:0 0 .3em !important;font-style:italic;opacity:.85;font-size:.92em}
+#uf .hpw-name{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:-4px 0 14px}
+#uf .hpw-name label{font-size:.9em;opacity:.85}
+#uf .hpw-name input{flex:1 1 140px;max-width:220px;background:var(--s2);border:1px solid var(--line);color:inherit;border-radius:10px;padding:7px 10px;font:inherit}
+#uf .hpw-v{font-style:italic;font-size:.9em}
+#uf .hpw-fxbox{width:100px;height:100px;display:flex;align-items:center;justify-content:center}
+#uf .hpw-av.sm{width:76px;height:76px;display:block;padding:7px}
+#uf .hf-pixel.hpw-fs{font-size:.62em;line-height:1.6}
+#uf .hf-swing.hpw-fs{font-size:.95em}
+#uf .hf-comic.hpw-fs{font-size:1.15em;letter-spacing:.03em}
+#uf .hf-pixel .hp-panel{font-size:calc(var(--hpfs,.92em) * .72)!important;line-height:1.7}
+#uf .hf-comic .hp-panel{font-size:calc(var(--hpfs,.92em) * 1.12)!important;letter-spacing:.03em}
+#uf .bs-postit .hp-panel{background:#fff59d;color:#3a3000;border:0;border-radius:2px;box-shadow:3px 5px 10px rgba(0,0,0,.4);transform:rotate(-.6deg)}
+#uf .bs-postit .hp-head b{color:#b8860b}
+#uf .bs-postit .hp-box{background:#fffbd0;border-color:#e0cf5a;color:#3a3000}
+#uf .bs-postit .hp-face{background:#fff59d;border-color:#e0cf5a}
+#uf .bs-cloud .hp-panel{background:#fff;color:#1d3150;border:0;border-radius:30px;box-shadow:0 0 0 6px rgba(255,255,255,.35),0 10px 30px rgba(60,120,200,.45)}
+#uf .bs-cloud .hp-head b{color:#3c8fd0}
+#uf .bs-cloud .hp-box{background:#eef6ff;border-color:#bcdcf5;color:#1d3150;border-radius:16px}
+#uf .bs-cloud .hp-face{background:#eaf6ff;border-color:#fff}
+#uf .bs-candy .hp-panel{background:repeating-linear-gradient(135deg,#fff 0 14px,#ffe1ea 14px 28px);color:#5a1030;border:3px solid #ff5a8a;border-radius:18px}
+#uf .bs-candy .hp-head b{color:#e0306a}
+#uf .bs-candy .hp-box{background:#fff;border-color:#ff9ab5;color:#5a1030}
+#uf .bs-candy .hp-face{background:#fff;border-color:#ff5a8a}
+#uf .bs-wood .hp-panel{background:repeating-linear-gradient(180deg,#a8784f 0 22px,#9a6a42 22px 24px);color:#fff4dc;border:4px solid #5e3a1f;border-radius:8px;text-shadow:0 1px 1px rgba(0,0,0,.4)}
+#uf .bs-wood .hp-head b{color:#ffd23f}
+#uf .bs-wood .hp-box{background:rgba(40,20,5,.35);border-color:#5e3a1f;color:#fff4dc}
+#uf .bs-wood .hp-face{background:#8a5a35;border-color:#5e3a1f}
+#uf .bs-pixel .hp-panel{background:#1b1b2f;color:#e8e8ff;border:0;border-radius:0;box-shadow:0 -4px 0 #e8e8ff,0 4px 0 #e8e8ff,-4px 0 0 #e8e8ff,4px 0 0 #e8e8ff,0 0 0 4px #1b1b2f,6px 10px 0 rgba(0,0,0,.4);margin:4px}
+#uf .bs-pixel .hp-head b{color:#ffd23f}
+#uf .bs-pixel .hp-box{background:#2b2b4f;border:2px solid #e8e8ff;border-radius:0}
+#uf .bs-pixel .hp-acts button{border-radius:0}
+#uf .bs-pixel .hp-face{border-radius:8px;background:#1b1b2f;border-color:#e8e8ff}
+#uf .bs-space .hp-panel{background:radial-gradient(1px 1px at 20% 30%,#fff,transparent),radial-gradient(1px 1px at 70% 20%,#fff,transparent),radial-gradient(1.5px 1.5px at 85% 70%,#ffe680,transparent),radial-gradient(1px 1px at 40% 80%,#fff,transparent),radial-gradient(circle at 80% 110%,#5b2a8a,transparent 60%),#0a0620;color:#efe8ff;border:2px solid #7d5ad8;box-shadow:0 0 18px rgba(125,90,216,.5)}
+#uf .bs-space .hp-head b{color:#ffe680}
+#uf .bs-space .hp-box{background:rgba(125,90,216,.18);border-color:#7d5ad8}
+#uf .bs-space .hp-face{background:#0a0620;border-color:#7d5ad8}
+#uf .bs-postit .hp-acts button,#uf .bs-cloud .hp-acts button,#uf .bs-candy .hp-acts button{background:#2a1c0a;color:#fff6dc;border-color:#2a1c0a}
+#uf .bs-postit .hp-say b,#uf .bs-cloud .hp-say b,#uf .bs-candy .hp-say b{color:inherit}
+/* Effekte am Gesicht */
+#uf .hp-face,#uf .hpw-av{position:relative;isolation:isolate}
+#uf .fx-pulse .hp-face,#uf .fx-pulse .hpw-av{animation:fxPulse 1.8s ease-in-out infinite}
+@keyframes fxPulse{50%{box-shadow:0 0 0 6px rgba(60,196,240,.35),0 0 24px rgba(60,196,240,.8)}}
+#uf .fx-fire .hp-face,#uf .fx-fire .hpw-av{animation:fxFire .5s ease-in-out infinite alternate;border-color:#ff9e1b}
+@keyframes fxFire{from{box-shadow:0 0 10px 2px #ff6b1b,0 -6px 18px #ffd23f}to{box-shadow:0 0 16px 5px #ff3b1b,0 -10px 24px #ff9e1b}}
+#uf .fx-rainbow .hp-face:before,#uf .fx-rainbow .hpw-av:before{content:"";position:absolute;inset:-6px;border-radius:50%;z-index:-1;background:conic-gradient(#ff6b6b,#ffd23f,#3ddc97,#3cc4f0,#b388ff,#ff6fa5,#ff6b6b);-webkit-mask:radial-gradient(closest-side,transparent 83%,#000 85%);mask:radial-gradient(closest-side,transparent 83%,#000 85%);animation:fxSpin 3s linear infinite}
+@keyframes fxSpin{to{transform:rotate(360deg)}}
+#uf .fx-sparkle .hp-face:after,#uf .fx-sparkle .hpw-av:after{content:"✦  ✧   ✦";position:absolute;left:-8px;right:-8px;top:-10px;color:#fff6c0;font-size:14px;letter-spacing:6px;text-shadow:0 0 6px #ffd23f;animation:fxTw 1.4s ease-in-out infinite;pointer-events:none;white-space:nowrap;text-align:center}
+@keyframes fxTw{50%{opacity:.2;transform:translateY(-3px) scale(.9)}}
+#uf .fx-hearts .hp-face:after,#uf .fx-hearts .hpw-av:after{content:"♥";position:absolute;right:-4px;top:-6px;color:#ff5a8a;font-size:18px;animation:fxHeart 2s ease-out infinite;pointer-events:none}
+#uf .fx-hearts .hp-face:before,#uf .fx-hearts .hpw-av:before{content:"♥";position:absolute;left:-2px;top:4px;color:#ff9ec4;font-size:13px;animation:fxHeart 2s ease-out 1s infinite;pointer-events:none}
+@keyframes fxHeart{0%{opacity:0;transform:translateY(8px) scale(.6)}30%{opacity:1}100%{opacity:0;transform:translateY(-26px) scale(1.1)}}
+#uf .fx-orbit .hp-face:after,#uf .fx-orbit .hpw-av:after{content:"★";position:absolute;left:50%;top:50%;width:0;height:0;color:#ffd23f;font-size:15px;line-height:0;text-shadow:0 0 6px #ffd23f;animation:fxOrbit 2.4s linear infinite;pointer-events:none}
+@keyframes fxOrbit{from{transform:rotate(0) translateX(calc(50% + 40px)) rotate(0)}to{transform:rotate(360deg) translateX(calc(50% + 40px)) rotate(-360deg)}}
+#uf .hpw-fxbox .hpw-av.sm{cursor:default}
+/* Kostenfresser-Angriff */
+#uf .mon-shake{animation:monShake .12s linear 7}
+@keyframes monShake{25%{transform:translate(-6px,3px)}50%{transform:translate(5px,-4px)}75%{transform:translate(-3px,-2px)}}
+#uf .mon-ov{position:fixed;inset:0;z-index:2000;overflow:hidden;background:rgba(10,0,20,.25);animation:monFade .3s}
+#uf .mon-ov.out{animation:monOut .7s forwards}
+@keyframes monFade{from{opacity:0}}
+@keyframes monOut{to{opacity:0}}
+#uf .mon-flash{position:absolute;inset:0;background:#ff3b3b;opacity:0;animation:monFlash .6s .55s 2}
+@keyframes monFlash{30%{opacity:.35}}
+#uf .mon-cracks{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .3s}
+#uf .mon-cracks path{fill:none;stroke:#f5f0ff;stroke-width:.35;stroke-linecap:round;filter:drop-shadow(0 0 .4px #000);stroke-dasharray:60;stroke-dashoffset:60}
+#uf .mon-cracks circle{fill:#1b0b2e}
+#uf .mon-ov.hit .mon-cracks{opacity:.9}
+#uf .mon-ov.hit .mon-cracks path{animation:monCrack .5s forwards}
+@keyframes monCrack{to{stroke-dashoffset:0}}
+#uf .mon-bite{position:absolute;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle,#06112f 62%,transparent 63%);opacity:0;transform:scale(.3)}
+#uf .mon-bite:after{content:"";position:absolute;inset:4%;border-radius:50%;background:repeating-conic-gradient(transparent 0 8deg,rgba(255,255,255,.9) 8deg 10deg,transparent 10deg 20deg);-webkit-mask:radial-gradient(circle,transparent 58%,#000 59%,#000 62%,transparent 63%);mask:radial-gradient(circle,transparent 58%,#000 59%,#000 62%,transparent 63%)}
+#uf .mon-bite.b1{right:-70px;top:12%}#uf .mon-bite.b2{left:-80px;top:48%;width:220px;height:220px}#uf .mon-bite.b3{right:22%;bottom:-90px}
+#uf .mon-ov.hit .mon-bite{animation:monBite .35s cubic-bezier(.3,1.6,.5,1) forwards}
+#uf .mon-ov.hit .mon-bite.b2{animation-delay:.25s}#uf .mon-ov.hit .mon-bite.b3{animation-delay:.5s}
+@keyframes monBite{to{opacity:1;transform:scale(1)}}
+#uf .mon-monster{position:absolute;right:6%;bottom:6%;width:min(46vw,300px);animation:monIn .9s cubic-bezier(.3,1.4,.5,1) both;filter:drop-shadow(0 16px 24px rgba(0,0,0,.6))}
+#uf .mon-monster svg{width:100%;height:auto;display:block;animation:monChomp .28s ease-in-out .9s infinite alternate}
+@keyframes monIn{from{transform:translateX(120%) rotate(20deg)}}
+@keyframes monChomp{to{transform:scale(1.06,.92) rotate(-3deg)}}
+#uf .mon-roar{position:absolute;left:50%;top:14%;transform:translateX(-50%) rotate(-4deg);text-align:center;font-family:Anton,Impact,sans-serif;font-size:clamp(2.4rem,9vw,5rem);color:#ffd23f;-webkit-text-stroke:2px #1b0b2e;text-shadow:4px 4px 0 #8a4fd8;animation:monRoar .5s .5s both;width:min(92vw,620px)}
+#uf .mon-roar small{display:block;font-family:Barlow,Arial,sans-serif;font-weight:700;font-size:clamp(.9rem,2.6vw,1.1rem);-webkit-text-stroke:0;text-shadow:0 2px 4px #000;color:#fff;margin-top:6px}
+#uf .mon-steal{display:inline-block;margin-top:8px;font-family:Barlow,Arial,sans-serif;font-size:1rem;-webkit-text-stroke:0;text-shadow:none;background:#ff6b6b;color:#fff;padding:4px 12px;border-radius:99px}
+@keyframes monRoar{from{opacity:0;transform:translateX(-50%) scale(.3) rotate(-20deg)}}
+#uf .mon-ov.hero .mon-roar{opacity:0;transition:opacity .4s}
+#uf .mon-ov.hero .mon-monster{animation:monScared .18s ease-in-out infinite alternate;right:2%}
+@keyframes monScared{to{transform:translateX(6px) rotate(3deg)}}
+#uf .mon-hero{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(560px,92vw);display:flex;gap:14px;align-items:flex-end;animation:heroIn .7s cubic-bezier(.3,1.4,.5,1) both}
+@keyframes heroIn{from{transform:translate(-160%,-50%) rotate(-25deg)}}
+#uf .mh-av{position:relative;flex:0 0 auto;width:110px;height:110px;border-radius:50%;padding:10px;background:#0f2a7a;border:3px solid var(--ac);box-shadow:0 0 30px rgba(60,196,240,.7);animation:heroBob 1s ease-in-out infinite alternate}
+#uf .mh-av svg{width:100%;height:100%;display:block;position:relative}
+#uf .mh-cape{position:absolute;left:-26px;top:30px;width:70px;height:70px;background:#e23b4a;border-radius:0 0 60% 10%;transform:rotate(18deg);box-shadow:inset -6px -6px 0 rgba(0,0,0,.2);z-index:-1}
+@keyframes heroBob{to{transform:translateY(-8px)}}
+#uf .mh-bub{flex:1;min-width:0;max-height:70vh;overflow:auto;background:#fff;color:#1b1407;border-radius:18px 18px 18px 4px;padding:14px 16px;box-shadow:0 14px 40px rgba(0,0,0,.6);font-size:.95em}
+#uf .mh-bub p{margin:.35em 0}#uf .mh-bub b{color:#1b1407}#uf .mh-bub .mh-t{color:#1a6f95}#uf .mh-o:focus,#uf .mh-o:hover{background:#e2ecff;color:#1b1407;outline:2px solid #3c8fd0;outline-offset:1px}#uf .mh-o.ok,#uf .mh-o.ok:focus{background:#d6f7e6;color:#1b1407}#uf .mh-o.no,#uf .mh-o.no:focus{background:#ffe0e0;color:#1b1407}#uf .mh-o:disabled{opacity:1;cursor:default}
+#uf .mh-t{font-family:var(--fd);font-size:1.3em;color:#1a6f95}
+#uf .mh-q{font-weight:700}
+#uf .mh-opts{display:grid;gap:6px;margin:8px 0}
+#uf .mh-o{text-align:left;background:#eef4ff;border:2px solid #b9cdf0;color:#1b1407;border-radius:10px;padding:8px 10px;font:inherit;cursor:pointer}
+#uf .mh-o:hover:not(:disabled){border-color:#3c8fd0}
+#uf .mh-o.ok{background:#d6f7e6;border-color:#2bb67a}
+#uf .mh-o.no{background:#ffe0e0;border-color:#e05a4a}
+#uf .mh-skip{background:none;border:0;color:#5a6585;text-decoration:underline;cursor:pointer;font:inherit;font-size:.85em;padding:2px 0}
+#uf .mh-ok{color:#1f8a55;font-weight:700}#uf .mh-no{color:#b3261e;font-weight:700}
+#uf .mh-bub .small{color:#4a4030}
+#uf .mh-fix{margin-top:6px}
+#uf .mon-ov.fixing .mon-monster{animation:monPoof .6s forwards}
+@keyframes monPoof{40%{transform:scale(1.2) rotate(10deg);opacity:1}100%{transform:scale(0) rotate(90deg);opacity:0}}
+#uf .mon-ov.fixing .mon-cracks,#uf .mon-ov.fixing .mon-bite{transition:opacity .6s;opacity:0!important;animation:none}
+#uf .mon-ov.fixing .mh-av{box-shadow:0 0 60px 20px rgba(255,230,128,.8)}
+#uf .mon-ov.fixing:after{content:"✨ ✦ ✨ ✦ ✨";position:absolute;left:0;right:0;top:40%;text-align:center;font-size:3rem;color:#ffe680;letter-spacing:.4em;animation:fixStars 1.2s ease-out forwards;pointer-events:none}
+@keyframes fixStars{from{opacity:0;transform:scale(.5)}50%{opacity:1}to{opacity:0;transform:scale(1.6) translateY(-40px)}}
+@media (max-width:520px){#uf .mon-hero{flex-direction:column;align-items:center;top:54%}#uf .mh-av{width:84px;height:84px}#uf .mon-monster{width:40vw;bottom:2%}}
+@media (prefers-reduced-motion:reduce){#uf .mon-shake,#uf .mon-monster svg,#uf .mh-av,#uf .fx-pulse .hp-face,#uf .fx-fire .hp-face,#uf .fx-rainbow .hp-face:before,#uf .fx-orbit .hp-face:after{animation:none}}
 /* Meme-Modus */
 #uf .meme{display:none;margin:12px auto;max-width:360px;background:#000;border-radius:12px;overflow:hidden;border:2px solid #222}
 #uf.memeon .meme,#uf .mpop .meme{display:block}
@@ -1187,9 +1365,9 @@ relma:{why:"Der relative Marktanteil vergleicht dich mit dem Stärksten im Markt
 var HP={el:null,ctx:null,lvl:{},min:false};
 function helpyAvatar(){return '<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="60" rx="16" ry="3" fill="rgba(0,0,0,.25)"/><g class="hp-bob"><line x1="32" y1="6" x2="32" y2="14" stroke="#7fd9f7" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="5" r="4" fill="#ffd23f"/><rect x="10" y="13" width="44" height="40" rx="14" fill="#3cc4f0"/><rect x="15" y="19" width="34" height="20" rx="8" fill="#06112f"/><g class="hp-eyes"><circle cx="25" cy="29" r="4.2" fill="#7fd9f7"/><circle cx="39" cy="29" r="4.2" fill="#7fd9f7"/></g><path d="M26,44 Q32,49 38,44" fill="none" stroke="#06112f" stroke-width="3" stroke-linecap="round"/><circle cx="17" cy="44" r="3" fill="#ff9e1b" opacity=".8"/><circle cx="47" cy="44" r="3" fill="#ff9e1b" opacity=".8"/></g></svg>';}
 function helpyInit(){if(HP.el)return;var d=document.createElement("div");d.className="helpy";d.setAttribute("role","complementary");d.setAttribute("aria-label","Helpy, dein Lern-Buddy");
-d.innerHTML='<button class="hp-face" aria-label="Helpy öffnen oder minimieren">'+helpyAvatar()+'</button><div class="hp-panel"><div class="hp-head"><b>Helpy</b><span class="small">dein Lern-Buddy</span><button class="hp-min" aria-label="Helpy minimieren">–</button></div><div class="hp-say" aria-live="polite"></div><div class="hp-acts"></div></div>';root.appendChild(d);HP.el=d;}
+d.innerHTML='<button class="hp-face" aria-label="Helpy öffnen oder minimieren">'+hpAvatarMine()+'</button><div class="hp-panel"><div class="hp-head"><b>Helpy</b><span class="small">dein Lern-Buddy</span><button class="hp-min" aria-label="Helpy minimieren">–</button></div><div class="hp-say" aria-live="polite"></div><div class="hp-acts"></div></div>';root.appendChild(d);HP.el=d;hpApply();}
 function helpyShow(on){helpyInit();HP.el.hidden=!on;}
-function say(html,acts){if(!S.hp)return;helpyInit();HP.el.querySelector(".hp-say").innerHTML=html;HP.el.querySelector(".hp-acts").innerHTML=(acts||[]).map(function(a){return '<button class="hp-act" data-a="'+a[0]+'">'+a[1]+'</button>';}).join("");HP.el.classList.add("talk");clearTimeout(HP.tt);HP.tt=setTimeout(function(){HP.el.classList.remove("talk");},700);if(HP.min&&HP.ctx&&HP.ctx.urgent){}}
+function say(html,acts){if(!S.hp)return;helpyInit();HP.el.querySelector(".hp-say").innerHTML=(typeof hpVoice==="function"?hpVoice(html):html);HP.el.querySelector(".hp-acts").innerHTML=(acts||[]).map(function(a){return '<button class="hp-act" data-a="'+a[0]+'">'+a[1]+'</button>';}).join("");HP.el.classList.add("talk");clearTimeout(HP.tt);HP.tt=setTimeout(function(){HP.el.classList.remove("talk");},700);if(HP.min&&HP.ctx&&HP.ctx.urgent){}}
 function maskStep(h){var i=h.lastIndexOf("<b>");if(i<0)return h;var j=h.indexOf("</b>",i);return h.slice(0,i)+'<b class="hp-q">?</b>'+h.slice(j+4);}
 function helpyField(box,idx){if(!S.hp)return;var I=INST[box.getAttribute("data-inst")];if(!I)return;var H=HELP[I.id];if(!H)return;var f=H.f[idx];if(!f)return;HP.ctx={box:box,idx:idx,I:I};var key=box.getAttribute("data-inst")+"-"+idx;var lv=HP.lvl[key]||0;
 var lab=I.d.f[idx].l;var h='<p class="hp-t">Feld: <b>'+esc(lab)+'</b></p><p>'+ab(f[0])+'</p>';if(lv>=1)h+='<div class="hp-box"><span class="lab">Formel</span>'+ab(esc(f[1]))+'</div>';if(lv>=2){var st=Array.isArray(f[2])?f[2]:[f[2]];h+='<div class="hp-box"><span class="lab">Zahlen einsetzen</span>'+st.map(function(k){return '<div>'+maskStep(I.d.s[k]||"")+'</div>';}).join("")+'<div class="small">Das <b class="hp-q">?</b> rechnest du selbst aus.</div></div>';}
@@ -1210,7 +1388,7 @@ say('<p class="hp-t">Schauen wir uns <b>'+esc(f.l)+'</b> zusammen an.</p>'+(msg?
 function helpyTopic(m,i){if(!S.hp)return;var t=m.topics[i];HP.ctx=null;var plain=String(t.what).replace(/<[^>]+>/g,""),cut=plain.indexOf(". "),first=cut>0?plain.slice(0,cut+1):plain;say('<p class="hp-t">'+esc(t.t)+'</p><p>Kurz gesagt: '+esc(first)+'</p>'+(t.merk?'<p>Merk dir: <i>'+esc(t.merk)+'</i></p>':'')+'<p class="small">Unter „Ausführlich erklärt“ gibt es mehr. Bei den Rechenaufgaben helfe ich dir, sobald du in ein Feld tippst.</p>',[]);}
 function helpyQuiz(q,ok){if(!S.hp)return;HP.ctx=null;if(ok)say(pick(["Richtig! 👍","Genau so!","Sitzt! Weiter so."]),[]);else say('<p class="hp-t">Nicht schlimm – daraus lernt man am meisten.</p><p>'+q.e+'</p><p class="small">Tipp: Lies die richtige Antwort laut und erklär sie in eigenen Worten.</p>',[]);}
 function helpyTab(id){if(!S.hp)return;HP.ctx=null;var m=MODS.filter(function(x){return x.id===id;})[0];if(m){say('<p class="hp-t">'+esc(m.title)+'</p><p>Mein Vorschlag: Erst die Themenkarten aufklappen, dann unten die Rechenaufgaben. Wenn du in ein Feld tippst, zeige ich dir den Weg – ohne die Lösung zu verraten.</p>',[]);}else if(id==="rechnen")say("Im Rechentrainer kannst du jede Aufgabe mit neuen Zahlen wiederholen. Tipp in ein Feld, dann führe ich dich durch.",[]);else if(id==="lz")say("Mut zur Lücke! Wir machen nur das Wichtigste. Fang mit Block 1 an – bei den Aufgaben bin ich für dich da.",[]);else helpyGreet();}
-function helpyGreet(){HP.ctx=null;say('<p class="hp-t">Hi, ich bin Helpy! 👋</p><p>Ich helfe dir, die Aufgaben wirklich zu <b>verstehen</b>: Tipp in ein Rechenfeld, dann zeige ich dir zuerst die Idee, dann die Formel und dann, welche Zahlen du einsetzt. Ausrechnen tust du selbst.</p><p class="small">Wenn etwas falsch ist, erkläre ich dir, was wahrscheinlich schiefgelaufen ist.</p>',[]);}
+function helpyGreet(){HP.ctx=null;say('<p class="hp-t">Hi, ich bin '+esc(typeof hpNm==="function"?hpNm():"Helpy")+'! 👋</p><p>Ich helfe dir, die Aufgaben wirklich zu <b>verstehen</b>: Tipp in ein Rechenfeld, dann zeige ich dir zuerst die Idee, dann die Formel und dann, welche Zahlen du einsetzt. Ausrechnen tust du selbst.</p><p class="small">Wenn etwas falsch ist, erkläre ich dir, was wahrscheinlich schiefgelaufen ist.</p>',[]);}
 /* ===== Lernzimmer & Sammelkarten (eigene Figuren, eigene Grafiken) ===== */
 function shade(h,p){var n=parseInt(h.slice(1),16),r=n>>16,g=n>>8&255,bl=n&255;function f(v){return Math.max(0,Math.min(255,Math.round(v+(p<0?v:255-v)*p/100)));}return "#"+((1<<24)+(f(r)<<16)+(f(g)<<8)+f(bl)).toString(16).slice(1);}
 /* Parametrische Tierfigur, viewBox 0 0 100 100 */
@@ -1634,9 +1812,153 @@ c[6].map(function(a,i){return '<div class="atk" tabindex="0"><div class="ah"><sp
 '<div class="rc-tip"><b>Klausur-Tipp</b>'+esc(X.tip||"").replace(/k_v/g,"k<sub>v</sub>")+'</div><div class="rc-ft"><i>'+c[7]+'</i><span class="nr">'+c.nr+'/'+TCG.length+' <span>'+RAR[c[4]][1]+'</span></span></div></div></div>';}
 function retroMini(c,k){var T=TCOL[c[2]];return '<button class="mini2 r'+c[4]+'" data-ca="view" data-k="'+c[0]+'" style="--tc:'+T[0]+';--td:'+T[1]+'"><span class="m2-hd"><b>'+esc(c[1])+'</b>'+ico(c[2],"m2-ico")+'</span><span class="m2-art">'+artSvg(c,"m2-pic")+(c[4]==="L"?'<span class="rc-holo"></span>':'')+'</span><span class="m2-ft"><span>Nr. '+String(c.nr).padStart(2,"0")+'</span><span class="m2-r">'+RAR[c[4]][1]+(k>1?' ×'+k:'')+'</span></span></button>';}
 (function(){if(!document.getElementById("hd-wob"))root.insertAdjacentHTML("afterbegin",HD_DEFS);})();
+/* ===== Helpy-Werkstatt: Helpy mit Talern anpassen ===== */
+var HPC_ROBO={robo:{n:"Helpy Klassik",p:0,b:"#3cc4f0",v:"#06112f",e:"#7fd9f7",an:"#ffd23f",ck:"#ff9e1b"},
+"robo-mint":{n:"Helpy Minze",p:80,b:"#5fdcae",v:"#0d2a24",e:"#c8ffe9",an:"#ff8fb4",ck:"#ff8fb4"},
+"robo-rosa":{n:"Helpy Kaugummi",p:80,b:"#ff9ec4",v:"#3a0f2a",e:"#ffe0f0",an:"#7fd9f7",ck:"#ff5a95"},
+"robo-zitrone":{n:"Helpy Zitrone",p:80,b:"#f2e14c",v:"#2e2a06",e:"#fffbd0",an:"#3ddc97",ck:"#ff9e1b"},
+"robo-lava":{n:"Helpy Lava",p:100,b:"#ff6b4a",v:"#2a0a04",e:"#ffd23f",an:"#ffd23f",ck:"#ffd23f"},
+"robo-ozean":{n:"Helpy Ozean",p:100,b:"#2f78ad",v:"#04162a",e:"#7fe8ff",an:"#ffffff",ck:"#7fe8ff"},
+"robo-wald":{n:"Helpy Wald",p:100,b:"#4f9a56",v:"#0c2210",e:"#d8ff9a",an:"#ff6b6b",ck:"#ffb84d"},
+"robo-eis":{n:"Helpy Eiskristall",p:120,b:"#d8f1ff",v:"#18355a",e:"#9fe0ff",an:"#b388ff",ck:"#9fc8ff"},
+"robo-schoko":{n:"Helpy Schoko",p:120,b:"#8a5a35",v:"#2a1608",e:"#ffd9a8",an:"#ff6fa5",ck:"#ffb27a"},
+"robo-retro":{n:"Helpy Retro",p:120,b:"#e8d6a9",v:"#3a2a14",e:"#ffd27a",an:"#c8453a",ck:"#e0a35a"},
+"robo-kirsche":{n:"Helpy Kirsche",p:140,b:"#d6334a",v:"#2a0610",e:"#ffd0d8",an:"#3ddc97",ck:"#ff9ec4"},
+"robo-nacht":{n:"Helpy Nachtschicht",p:150,b:"#5b4aa8",v:"#0b0820",e:"#ff6fd8",an:"#7fd9f7",ck:"#b388ff"},
+"robo-galaxie":{n:"Helpy Galaxie",p:220,b:"#2b1d5c",v:"#05030f",e:"#ffd23f",an:"#ff6fd8",ck:"#7fd9f7"},
+"robo-gold":{n:"Helpy Gold-Edition",p:400,b:"#ffd23f",v:"#3a2a00",e:"#fff6c0",an:"#ff6b6b",ck:"#ff9e1b"}};
+var HPC_ANIM=[["kat","Kiki Katze",120],["has","Hanni Hase",120],["t:hamster","Hamster Hugo",150],["fro","Frido Frosch",150],["t:biene","Biene Bella",160],["pan","Paul Panda",180],["fux","Fritzi Fuchs",180],["t:dachs","Dachs Dana",180],["t:wasch","Waschbär Willi",180],["t:robbe","Robbe Rudi",180],["t:biber","Biber Bodo",200],["t:koala","Koala Kira",200],["t:kuh","Kuh Klara",200],["axo","Axel Axolotl",220],["pin","Pina Pinguin",220],["eule","Eule Erna",220,{c:"#b98f62",b:"#f1dcc0",e:"tuft",x:["beak","bigeyes","wings"]}],["t:chama","Chamäleon Cleo",220],["kal","Kalki",300],["fresser","Kostenfresser (gezähmt)",500,{sp:"fresser"}]];
+var HPC_HEAD=[["","Ohne",0],["bow","Schleife",50],["band","Stirnband",50],["cap","Basecap",70],["beanie","Bommelmütze",70],["catears","Katzenohren",80],["headset","Kopfhörer",80],["flowers","Blumenkranz",90],["party","Partyhut",90],["horns","Teufelchen-Hörner",100],["chef","Kochmütze",110],["santa","Weihnachtsmütze",110],["pirate","Piratenhut",130],["hat","Doktorhut",150],["wizard","Zauberhut",180],["halo","Heiligenschein",200],["crown","Krone",300]];
+var HPC_FACE=[["","Ohne",0],["glasses","Lernbrille",60],["stache","Schnurrbart",60],["bowtie","Fliege",60],["patch","Augenklappe",70],["sun","Sonnenbrille",80]];
+var HPC_FX=[["","Ohne",0],["pulse","Leuchtpuls",60],["sparkle","Funkeln",80],["hearts","Herzchen",100],["fire","Feuerring",120],["rainbow","Regenbogenring",150],["orbit","Sternen-Orbit",200]];
+var HPC_BUB=[["std","Aldi-Nacht",0],["paper","Retro-Papier",80],["pastel","Pastell",80],["postit","Post-it",80],["cloud","Wolke",80],["comic","Comic",100],["candy","Zuckerstange",100],["wood","Holzschild",100],["chalk","Kreidetafel",120],["term","Terminal",120],["pixel","Pixel-Retro",120],["neon","Neon",150],["space","Weltall",150],["gold","Gold-Rahmen",300]];
+var HPC_FS=[["s","Klein",".82em"],["m","Normal",".92em"],["l","Groß","1.06em"],["xl","Sehr groß","1.22em"]];
+var HPC_FF=[["std","Standard","",0],["book","Buchschrift","\"Alegreya Sans\",sans-serif",40],["cond","Schmal & sportlich","\"Barlow Condensed\",sans-serif",40],["hand","Handschrift","Caveat,cursive",60],["retro","Retro-Serif","Fraunces,Georgia,serif",60],["mono","Schreibmaschine","\"IBM Plex Mono\",monospace",60],["comic","Comic","Bangers,cursive",80],["swing","Schwungschrift","Pacifico,cursive",80],["pixel","Pixel","\"Press Start 2P\",monospace",80]];
+var HPC_V=[["std","Standard",0],["robot","Roboter",60],["cool","Cool",80],["pirat","Pirat",80],["nerd","Nerd",80],["sport","Sport-Coach",80],["royal","Königlich",100],["oma","Oma",100]];
+var VOICE={robot:[["BEEP BOOP.","SYSTEM BEREIT.","*surr* *klick*","LERNMODUL GELADEN."],"🤖"],cool:[["Yo!","Läuft bei dir!","Chill, wir schaffen das.","Easy going:"],"😎"],pirat:[["Arrr, Matrose!","Ahoi, Landratte!","Bei meinem Holzbein!","Hisst die Segel!"],"🏴‍☠️"],nerd:[["Fun Fact: Formeln sind wie Rezepte!","Hmm, faszinierend!","Laut meinen Berechnungen:","Achtung, jetzt wird's spannend!"],"🤓"],sport:[["Auf geht's, Champion!","Noch eine Runde!","Kopf hoch, Brust raus!","Du bist im Flow!"],"💪"],royal:[["Verehrte Lernende,","Hört, hört!","Mit allergrößter Freude:","Auf königlichen Befehl:"],"👑"],oma:[["Ach Kindchen,","Hast du schon was gegessen?","Früher hatten wir nur den Rechenschieber!","Na, mein Schatz?"],"👵"]};
+var HPCATS=[["ch","Figuren",HPC_ANIM],["a","Kopf",HPC_HEAD],["g","Gesicht",HPC_FACE],["fx","Effekte",HPC_FX],["b","Sprechblase",HPC_BUB],["f","Schriftart",HPC_FF],["fs","Schriftgröße",HPC_FS],["v","Persönlichkeit",HPC_V]];
+var HPCAT="ch";
+var ROBO_ACC=["hat","headset","bow","crown","cap"],HATS=["hat","crown","cap","party","wizard","santa","chef","beanie","pirate","halo"];
+function hpc(){if(!S.hpc||typeof S.hpc!=="object")S.hpc={};var H=S.hpc;if(!H.own)H.own={};["ch","robo","a","","g","","fx","","b","std","fs","m","f","std","v","std","nm","Helpy"].forEach(function(x,i,arr){if(i%2===0&&H[x]==null)H[x]=arr[i+1];});
+if(H.a==="glasses"){H.a="";H.g="glasses";}if(H.own["a-glasses"]){H.own["g-glasses"]=1;delete H.own["a-glasses"];}return H;}
+function hpOwn(k){var p=k.split("-"),t=p.shift(),v=p.join("-");if(t==="fs")return true;if((t==="ch"&&v==="robo")||((t==="a"||t==="g"||t==="fx")&&v==="")||((t==="b"||t==="f"||t==="v")&&v==="std"))return true;return !!hpc().own[k];}
+/* Zubehör im 100er-Koordinatensystem (Tierkopf: Mitte 50/42) */
+function critterAcc(a){var fl="";
+if(a==="glasses")return '<g fill="rgba(200,230,255,.25)" stroke="#2a1d2e" stroke-width="2"><circle cx="41" cy="40" r="7"/><circle cx="59" cy="40" r="7"/></g><path d="M48 40 H52" stroke="#2a1d2e" stroke-width="2"/>';
+if(a==="sun")return '<rect x="31" y="34" width="16" height="11" rx="4" fill="#111"/><rect x="53" y="34" width="16" height="11" rx="4" fill="#111"/><path d="M47 38 H53" stroke="#111" stroke-width="2.4"/><path d="M34 37 h5 M56 37 h5" stroke="#fff" opacity=".6" stroke-width="1.6"/>';
+if(a==="patch")return '<path d="M28 30 L72 47" stroke="#111" stroke-width="2"/><ellipse cx="59" cy="40" rx="7.5" ry="6.5" fill="#111"/>';
+if(a==="stache")return '<path d="M50 51 C45 46 37 47 33 53 C39 51 44 54 50 52 C56 54 61 51 67 53 C63 47 55 46 50 51Z" fill="#4a2f17"/>';
+if(a==="bowtie")return '<path d="M50 65 l-11 -6 v12Z M50 65 l11 -6 v12Z" fill="#d6334a" stroke="#7a1a14" stroke-width="1"/><circle cx="50" cy="65" r="3" fill="#a3271c"/>';
+if(a==="party")return '<polygon points="50,-4 63,21 37,21" fill="#b388ff" stroke="#55408a" stroke-width="1.2"/><path d="M45 8 h10 M41 15 h18" stroke="#ffd23f" stroke-width="2.4"/><circle cx="50" cy="-4" r="4" fill="#ff6fa5"/>';
+if(a==="wizard")return '<path d="M50 -14 Q58 2 70 22 H30 Q42 2 50 -14Z" fill="#3a3f9e" stroke="#1d2060" stroke-width="1.2"/><ellipse cx="50" cy="22" rx="26" ry="4.5" fill="#2b2f80"/><path d="M45 4 l1.4 3 3 .4 -2.2 2 .6 3 -2.8 -1.5 -2.8 1.5 .6 -3 -2.2 -2 3 -.4Z" fill="#ffd23f"/><circle cx="56" cy="12" r="1.5" fill="#fff"/>';
+if(a==="flowers"){[[30,26,"#ff8fa3"],[39,20,"#fff"],[50,18,"#ffd23f"],[61,20,"#fff"],[70,26,"#b388ff"]].forEach(function(f){fl+='<g transform="translate('+f[0]+' '+f[1]+')"><circle cx="0" cy="-3" r="2.8" fill="'+f[2]+'"/><circle cx="3" cy="0" r="2.8" fill="'+f[2]+'"/><circle cx="0" cy="3" r="2.8" fill="'+f[2]+'"/><circle cx="-3" cy="0" r="2.8" fill="'+f[2]+'"/><circle r="1.8" fill="#ffb84d"/></g>';});return '<path d="M28 28 Q50 14 72 28" stroke="#4f8a2e" stroke-width="2.4" fill="none"/>'+fl;}
+if(a==="halo")return '<ellipse cx="50" cy="5" rx="17" ry="4.5" fill="none" stroke="#ffd23f" stroke-width="3.4"/><ellipse cx="50" cy="5" rx="17" ry="4.5" fill="none" stroke="#fff6c0" stroke-width="1"/>';
+if(a==="horns")return '<path d="M35 24 Q28 12 33 5 Q36 16 43 20Z M65 24 Q72 12 67 5 Q64 16 57 20Z" fill="#e23b4a" stroke="#7a1a14" stroke-width="1"/>';
+if(a==="band")return '<path d="M27 32 Q50 20 73 32" fill="none" stroke="#ff6b6b" stroke-width="6" stroke-linecap="round"/><path d="M28 31 Q50 19.6 72 31" fill="none" stroke="#fff" stroke-width="1.4"/>';
+if(a==="santa")return '<path d="M28 24 Q36 0 60 4 Q74 8 80 24Z" fill="#d6334a"/><path d="M60 4 Q80 6 84 22" fill="none" stroke="#d6334a" stroke-width="8" stroke-linecap="round"/><circle cx="85" cy="25" r="5" fill="#fff"/><rect x="26" y="20" width="50" height="8" rx="4" fill="#fff"/>';
+if(a==="chef")return '<g fill="#fff" stroke="#c9ccd6"><circle cx="38" cy="7" r="8"/><circle cx="50" cy="3" r="9"/><circle cx="62" cy="7" r="8"/></g><rect x="34" y="9" width="32" height="13" rx="2" fill="#fff" stroke="#c9ccd6"/><path d="M36 10 h28" stroke="#fff" stroke-width="4"/>';
+if(a==="pirate")return '<path d="M22 23 Q50 -8 78 23 Q50 15 22 23Z" fill="#1d1f2b"/><path d="M22 23 Q50 15 78 23" fill="none" stroke="#ffd23f" stroke-width="1.6"/><circle cx="50" cy="11" r="3" fill="#fff"/><path d="M46 15 l8 0" stroke="#fff" stroke-width="1.6"/>';
+if(a==="beanie")return '<path d="M27 27 Q28 4 50 4 Q72 4 73 27Z" fill="#3cc4f0"/><path d="M38 8 v18 M50 5 v21 M62 8 v18" stroke="#1a8fb8" stroke-width="1.4"/><rect x="26" y="22" width="48" height="8" rx="3.5" fill="#1a8fb8"/><circle cx="50" cy="3" r="5" fill="#fff"/>';
+if(a==="catears")return '<path d="M30 27 Q50 15 70 27" stroke="#2b2f45" stroke-width="3" fill="none"/><polygon points="32,25 34,7 45,18" fill="#2b2f45"/><polygon points="68,25 66,7 55,18" fill="#2b2f45"/><polygon points="35,21 36,12 42,17" fill="#ff8fb4"/><polygon points="65,21 64,12 58,17" fill="#ff8fb4"/>';
+return "";}
+function roboAcc(a){
+if(a==="glasses")return '<g fill="rgba(255,255,255,.18)" stroke="#111" stroke-width="2"><circle cx="25" cy="29" r="6.6"/><circle cx="39" cy="29" r="6.6"/></g><path d="M31.6 29 H32.4" stroke="#111" stroke-width="2.4"/>';
+if(a==="hat")return '<polygon points="32,3 55,10 32,17 9,10" fill="#1d1f2b"/><rect x="21" y="10" width="22" height="6" fill="#1d1f2b"/><path d="M51 11 v10" stroke="#ffd23f" stroke-width="1.8"/><circle cx="51" cy="22" r="2.4" fill="#ffd23f"/>';
+if(a==="headset")return '<path d="M8 32 Q8 3 32 3 Q56 3 56 32" fill="none" stroke="#2b2f45" stroke-width="3.4"/><rect x="4" y="25" width="8" height="13" rx="3.5" fill="#ff9e1b"/><rect x="52" y="25" width="8" height="13" rx="3.5" fill="#ff9e1b"/><path d="M8 38 Q10 48 20 47" fill="none" stroke="#2b2f45" stroke-width="2"/><circle cx="21" cy="47" r="2" fill="#2b2f45"/>';
+if(a==="bow")return '<path d="M47 14 l-9 -6 v12Z M47 14 l9 -6 v12Z" fill="#ff6fa5" stroke="#c23b74" stroke-width=".8"/><circle cx="47" cy="14" r="2.6" fill="#ff3d86"/>';
+if(a==="crown")return '<polygon points="20,15 21,3 27,9 32,1 37,9 43,3 44,15" fill="#ffd23f" stroke="#b8860b" stroke-width="1.1"/><circle cx="32" cy="9" r="1.6" fill="#ff6b6b"/><circle cx="25" cy="11" r="1.2" fill="#3cc4f0"/><circle cx="39" cy="11" r="1.2" fill="#3ddc97"/>';
+if(a==="cap")return '<path d="M11 18 Q12 3 32 3 Q52 3 53 18Z" fill="#ff6b6b"/><path d="M53 18 h9 q-1 -5 -9 -5Z" fill="#d94a4a"/><circle cx="32" cy="4" r="2" fill="#d94a4a"/>';
+return '<g transform="translate(32 33) scale(.95 .9) translate(-50 -42)">'+critterAcc(a)+'</g>';}
+function roboSvg(k,a,g){var R=HPC_ROBO[k]||HPC_ROBO.robo,hide=HATS.indexOf(a)>=0;return '<svg viewBox="-4 -12 72 76" aria-hidden="true"><ellipse cx="32" cy="60" rx="16" ry="3" fill="rgba(0,0,0,.25)"/><g class="hp-bob">'+(hide?'':'<line x1="32" y1="6" x2="32" y2="14" stroke="'+shade(R.b,30)+'" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="5" r="4" fill="'+R.an+'"/>')+'<rect x="10" y="13" width="44" height="40" rx="14" fill="'+R.b+'"/><path d="M15 20 Q18 15 26 15" stroke="#fff" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".45"/><rect x="15" y="19" width="34" height="20" rx="8" fill="'+R.v+'"/><g class="hp-eyes"><circle cx="25" cy="29" r="4.2" fill="'+R.e+'"/><circle cx="39" cy="29" r="4.2" fill="'+R.e+'"/></g><path d="M26,44 Q32,49 38,44" fill="none" stroke="'+R.v+'" stroke-width="3" stroke-linecap="round"/><circle cx="17" cy="44" r="3" fill="'+R.ck+'" opacity=".8"/><circle cx="47" cy="44" r="3" fill="'+R.ck+'" opacity=".8"/>'+(g?roboAcc(g):"")+(a?roboAcc(a):"")+'</g></svg>';}
+function animSpec(k){var a=HPC_ANIM.filter(function(x){return x[0]===k;})[0];if(!a)return null;if(a[3])return a[3];if(k.indexOf("t:")===0)return TCGM[k.slice(2)]?TCGM[k.slice(2)][5]:null;var c=CHARS.filter(function(x){return x.k===k;})[0];return c?c.o:null;}
+function hpAvatarFor(ch,a,g){if(HPC_ROBO[ch])return roboSvg(ch,a,g);var o=animSpec(ch),q={};if(!o)return roboSvg("robo",a,g);for(var k in o)q[k]=o[k];var extra="";if(!q.sp){q.a=ROBO_ACC.indexOf(a)>=0?a:"";if(!q.a&&a)extra+=critterAcc(a);if(g)extra+=critterAcc(g);}return '<svg viewBox="-6 -16 112 116" aria-hidden="true"><ellipse cx="50" cy="96" rx="24" ry="4" fill="rgba(0,0,0,.25)"/><g class="hp-bob">'+figG(q)+extra+'</g></svg>';}
+function hpAvatarMine(){var H=hpc();return hpAvatarFor(H.ch,H.a,H.g);}
+function hpFsVal(){var f=HPC_FS.filter(function(x){return x[0]===hpc().fs;})[0];return f?f[2]:".92em";}
+function hpFf(f){var x=HPC_FF.filter(function(q){return q[0]===f;})[0];return x||HPC_FF[0];}
+function hpCls(H){return " bs-"+H.b+(H.f&&H.f!=="std"?" hf hf-"+H.f:"")+(H.fx?" fx-"+H.fx:"");}
+function hpNm(){return hpc().nm||"Helpy";}
+function hpVoice(html){var v=VOICE[hpc().v];if(!v)return html;return '<p class="hp-voice">'+v[0][Math.floor(Math.random()*v[0].length)]+' '+v[1]+'</p>'+html;}
+function hpApply(){var H=hpc(),ff=hpFf(H.f)[2]||"inherit";if(HP.el){HP.el.className=HP.el.className.replace(/\s*(bs|hf|fx)(-\w+)?(?=\s|$)/g,"")+hpCls(H);HP.el.style.setProperty("--hpfs",hpFsVal());HP.el.style.setProperty("--hpff",ff);var f=HP.el.querySelector(".hp-face");if(f)f.innerHTML=hpAvatarMine();var hb=HP.el.querySelector(".hp-head b");if(hb)hb.textContent=hpNm();}root.querySelectorAll(".hpbox .av").forEach(function(e){e.innerHTML=hpAvatarMine();});}
+function hpName(){var H=hpc();if(HPC_ROBO[H.ch])return HPC_ROBO[H.ch].n;var a=HPC_ANIM.filter(function(x){return x[0]===H.ch;})[0];return a?a[1]:"Helpy";}
+function hpDemo(H,mini,body){return '<div class="helpy-demo'+(mini?' mini':'')+hpCls({b:H.b,f:H.f})+'" style="--hpfs:'+(mini?'.74em':hpFsVal())+';--hpff:'+(hpFf(H.f)[2]||"inherit").replace(/"/g,"&quot;")+'"><div class="hp-panel">'+body+'</div></div>';}
+function hpPreview(){var H=hpc();return '<div class="hpw-prev'+(H.fx?' fx-'+H.fx:'')+'"><button class="hpw-av" aria-label="'+esc(hpNm())+' antippen – dreimal tippen für eine Überraschung">'+hpAvatarMine()+'</button>'+hpDemo(H,false,'<div class="hp-head"><b>'+esc(hpNm())+'</b><span class="small">als '+esc(hpName())+'</span></div><div class="hp-say">'+(VOICE[H.v]?'<p class="hp-voice">'+VOICE[H.v][0][0]+' '+VOICE[H.v][1]+'</p>':'')+'<p class="hp-t">So sehe ich jetzt aus!</p><p>Kundenskonto rechnest du <b>im Hundert</b>:</p><div class="hp-box">ZVP = BVP ÷ (1 − <span class="hp-q">?</span>)</div></div><div class="hp-acts"><button class="hp-act" tabindex="-1">Formel zeigen</button><button class="hp-act" tabindex="-1">Warum?</button></div>')+'</div><div class="hpw-name"><label for="ufHpName">Name deines Lern-Buddys (gratis)</label><input id="ufHpName" maxlength="16" value="'+esc(hpNm())+'" autocomplete="off"><button class="btn-x" data-ha="name">Speichern</button></div>';}
+function hpBuyBtn(key,price,label){return '<button class="btn-p" data-ha="buy" data-k="'+key+'"'+(coins()>=price?'':' disabled')+'>'+(label||"Kaufen")+' · '+price+' T</button>';}
+function hpItemCard(cat,key,name,price,preview,curTxt){var H=hpc(),cur=(H[cat]||"")===key,own=hpOwn(cat+"-"+key);return '<div class="rit'+(cur?' cur':'')+'">'+preview+'<b>'+name+'</b>'+(cur?'<span class="tagok">'+(curTxt||"aktiv")+'</span>':own?'<button class="btn-x" data-ha="set" data-t="'+cat+'" data-k="'+key+'">Auswählen</button>':hpBuyBtn(cat+"-"+key,price))+'</div>';}
+function hpShopGrid(){var H=hpc(),h="",sp=animSpec(H.ch),noAcc=sp&&sp.sp;
+if(HPCAT==="ch"){Object.keys(HPC_ROBO).forEach(function(k){var R=HPC_ROBO[k];h+=hpItemCard("ch",k,R.n,R.p,'<div class="hpw-mini">'+roboSvg(k,H.a,H.g)+'</div>');});HPC_ANIM.forEach(function(a){h+=hpItemCard("ch",a[0],a[1],a[2],'<div class="hpw-mini">'+hpAvatarFor(a[0],H.a,H.g)+'</div>');});}
+if(HPCAT==="a"||HPCAT==="g"){if(noAcc)h+='<p class="small" style="grid-column:1/-1">Diese Figur trägt kein Zubehör – die Vorschau zeigt es am klassischen Helpy.</p>';(HPCAT==="a"?HPC_HEAD:HPC_FACE).forEach(function(x){var ch=noAcc?"robo":H.ch;h+=hpItemCard(HPCAT,x[0],x[1],x[2],'<div class="hpw-mini">'+(HPCAT==="a"?hpAvatarFor(ch,x[0],H.g):hpAvatarFor(ch,H.a,x[0]))+'</div>',"trägt er gerade");});}
+if(HPCAT==="fx")HPC_FX.forEach(function(x){h+=hpItemCard("fx",x[0],x[1],x[2],'<div class="hpw-fxbox fx-'+(x[0]||"none")+'"><span class="hpw-av sm">'+hpAvatarMine()+'</span></div>');});
+if(HPCAT==="b")HPC_BUB.forEach(function(x){h+=hpItemCard("b",x[0],x[1],x[2],hpDemo({b:x[0],f:H.f},true,'<div class="hp-say"><p class="hp-t">Hallo!</p><p>db = p − k<sub>v</sub></p></div>'));});
+if(HPCAT==="f")HPC_FF.forEach(function(x){h+=hpItemCard("f",x[0],x[1],x[3],'<div class="hpw-fs hf-'+x[0]+'" style="font-family:'+(x[2]||"inherit").replace(/"/g,"&quot;")+'">Helpy erklärt dir den Deckungsbeitrag</div>');});
+if(HPCAT==="fs")HPC_FS.forEach(function(x){var cur=H.fs===x[0];h+='<div class="rit'+(cur?' cur':'')+'"><div class="hpw-fs" style="font-size:'+x[2]+'">Aa – '+esc(hpNm())+' erklärt</div><b>'+x[1]+'</b>'+(cur?'<span class="tagok">aktiv</span>':'<button class="btn-x" data-ha="set" data-t="fs" data-k="'+x[0]+'">Verwenden</button>')+'</div>';});
+if(HPCAT==="v")HPC_V.forEach(function(x){var V=VOICE[x[0]];h+=hpItemCard("v",x[0],x[1],x[2],'<div class="hpw-fs hpw-v">„'+(V?V[0][0]+' '+V[1]+' ':'')+'Dann rechnen wir mal!“</div>');});
+return h;}
+function hpShopHtml(){return '<div class="rtop"><span class="coinchip">Taler <b class="rco">'+coins()+'</b></span><span class="small">Gekaufte Sachen gehören dir für immer und lassen sich jederzeit wechseln.</span></div>'+hpPreview()+'<div class="rcats">'+HPCATS.map(function(c){return '<button data-hc="'+c[0]+'" class="'+(HPCAT===c[0]?"on":"")+'">'+c[1]+'</button>';}).join("")+'</div>'+(HPCAT==="fs"?'<p class="small">Die Schriftgröße ist gratis – lesen können soll jeder gut.</p>':'')+(HPCAT==="v"?'<p class="small">Die Persönlichkeit bestimmt, wie '+esc(hpNm())+' seine Erklärungen einleitet. Die Erklärungen selbst bleiben gleich.</p>':'')+'<div class="rshop">'+hpShopGrid()+'</div><p class="small" style="margin-top:12px">Geheimtipp: Tipp '+esc(hpNm())+' dreimal schnell an …</p>'+(S.hp?'':'<p class="small">Tipp: Schalte Helpy oben ein, damit er dich mit seinem neuen Look begleitet.</p>');}
+function renderHpShop(){var b=root.querySelector("#ufHpShop");if(!b)return;var y=window.pageYOffset;b.innerHTML=hpShopHtml();window.scrollTo(0,y);}
+function hpPrice(key){var p=key.split("-"),t=p.shift(),k=p.join("-");if(t==="ch")return HPC_ROBO[k]?HPC_ROBO[k].p:HPC_ANIM.filter(function(a){return a[0]===k;})[0][2];var L={a:HPC_HEAD,g:HPC_FACE,fx:HPC_FX,b:HPC_BUB,v:HPC_V}[t];if(t==="f")return HPC_FF.filter(function(a){return a[0]===k;})[0][3];return L.filter(function(a){return a[0]===k;})[0][2];}
+function hpShopAct(b){var a=b.getAttribute("data-ha"),k=b.getAttribute("data-k"),H=hpc();
+if(a==="name"){var v=(root.querySelector("#ufHpName").value||"").replace(/[<>]/g,"").trim().slice(0,16);H.nm=v||"Helpy";toastAlways("Dein Buddy heißt jetzt <b>"+esc(H.nm)+"</b>!");}
+if(a==="buy"){if(!spend(hpPrice(k)))return;H.own[k]=1;var p=k.split("-"),t=p.shift();H[t]=p.join("-");toastAlways("Gekauft und angelegt!");if(S.hp)say('<p class="hp-t">Danke! 😊</p><p>Steht mir super. Und jetzt: weiterrechnen!</p>');}
+if(a==="set"){H[b.getAttribute("data-t")]=k;}
+save();hpApply();renderHpShop();if(typeof checkBadges==="function")checkBadges();}
+root.addEventListener("click",function(ev){var t=ev.target,b;if(!t.closest)return;
+if((b=t.closest("[data-hc]"))){HPCAT=b.getAttribute("data-hc");renderHpShop();return;}
+if((b=t.closest("[data-ha]"))){if(b.disabled)return;hpShopAct(b);}});
+root.addEventListener("keydown",function(ev){if(ev.key==="Enter"&&ev.target.id==="ufHpName"){var b=root.querySelector('[data-ha="name"]');if(b)hpShopAct(b);}});
+function hpShopPanel(){PANELS.push({id:"hpshop",tab:"Helpy-Werkstatt",html:'<h2>Helpy-Werkstatt</h2><div class="intro">Gib deine <b>Taler</b> aus, um Helpy umzustylen: Figuren und Farben, Kopf- und Gesichts-Zubehör, Effekte, Sprechblasen, Schriftart und -größe, Persönlichkeit und einen eigenen Namen. Dein Level bleibt dabei gleich.</div><div id="ufHpShop"></div>'});}
+/* Dreimal antippen: Helpy tanzt und verschenkt Taler (max. 1x pro Stunde) */
+var HPT={n:0,last:0,min0:false};
+var DANCE_TXT=["Dance-Break! 🕺 Kurz bewegen hilft dem Gehirn beim Lernen.","Ich tanze den Break-even-Shuffle! 💃","Kosten runter, Laune rauf! 🎶","Das ist mein Deckungsbeitrags-Dance! 🕺"];
+function hpTap(src){var now=Date.now();if(now-HPT.last>650){HPT.n=0;HPT.min0=src==="face"?!HP.min:HP.min;}HPT.n++;HPT.last=now;if(HPT.n<3)return;HPT.n=0;
+if(src==="face"&&HP.el){HP.min=false;HP.el.classList.remove("min");if(typeof hpSync==="function")hpSync();}hpDance(src);}
+function hpDance(src){var els=[];if(HP.el&&S.hp)els.push(HP.el);var pv=root.querySelector(".hpw-prev");if(pv)els.push(pv);
+els.forEach(function(e){e.classList.remove("dance");void e.offsetWidth;e.classList.add("dance");var n=document.createElement("span");n.className="hp-notes";n.innerHTML="<i>♪</i><i>♫</i><i>♪</i><i>★</i>";e.appendChild(n);setTimeout(function(){e.classList.remove("dance");n.remove();},2800);});
+var now=Date.now(),wait=3600000-(now-(S.hpd||0)),msg=DANCE_TXT[Math.floor(Math.random()*DANCE_TXT.length)];
+if(wait<=0){S.hpd=now;earn(10);save();refreshHud();toastAlways("+10 Taler – danke fürs Mittanzen!");msg+=" Hier, <b>10 Taler</b> für dich!";}
+else msg+=" Taler gibt's beim nächsten Tanz in "+Math.ceil(wait/60000)+" Min. wieder – tanzen geht aber immer!";
+if(S.hp)say('<p class="hp-t">🎶 Woo-hoo!</p><p>'+msg+'</p>');else if(src!=="face")toastAlways(msg.replace(/<[^>]+>/g,""));}
+root.addEventListener("click",function(ev){var b=ev.target.closest&&ev.target.closest(".hpw-av");if(b)hpTap("prev");});
+/* ===== Kostenfresser-Angriff: 5 Fehler in Folge -> Seite wird zerlegt, Helpy repariert ===== */
+var MON={wr:0,last:0,busy:false,stolen:0,saved:[],ov:null,q:null,ok:false};
+function monCount(ok){if(ok){MON.wr=0;return;}if(typeof RUN!=="undefined"&&RUN)return;MON.wr++;
+if(MON.wr>=5&&S.gm&&S.mon!==false&&!MON.busy&&Date.now()-MON.last>180000){MON.wr=0;setTimeout(monAttack,900);}}
+function monTargets(){var list=[];Array.prototype.forEach.call(root.children,function(e){if(e.id==="ufPanels"||e.matches(".helpy,.modal,.fab,.toasts,.mon-ov,svg,script,noscript")||e.hidden)return;list.push(e);});
+var pan=root.querySelector(".panel.on");if(pan)Array.prototype.forEach.call(pan.children,function(e){list.push(e);});
+var vh=window.innerHeight;return list.filter(function(e){var r=e.getBoundingClientRect();return r.bottom>-200&&r.top<vh+200&&r.height>0;}).slice(0,40);}
+function monCracks(){var s='<svg class="mon-cracks" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">',pts=[[30+Math.random()*15,30+Math.random()*20],[60+Math.random()*20,55+Math.random()*25]];
+pts.forEach(function(p){for(var i=0;i<7;i++){var a=i/7*Math.PI*2+Math.random()*.5,x=p[0],y=p[1],d="M"+x+" "+y;for(var j=0;j<4;j++){a+=(Math.random()-.5)*.8;var l=4+Math.random()*7;x+=Math.cos(a)*l;y+=Math.sin(a)*l*1.4;d+=" L"+x.toFixed(1)+" "+y.toFixed(1);}s+='<path d="'+d+'"/>';}s+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="1.6"/>';});
+return s+'</svg>';}
+function monAttack(){if(MON.busy)return;MON.busy=true;MON.last=Date.now();MON.ok=false;
+if(typeof modal!=="undefined"&&!modal.hidden)closeModal();
+var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+MON.stolen=Math.min(5,coins());if(MON.stolen){S.co-=MON.stolen;save();refreshHud();}
+var ov=document.createElement("div");ov.className="mon-ov";ov.setAttribute("role","dialog");ov.setAttribute("aria-modal","true");ov.setAttribute("aria-label","Der Kostenfresser greift an");
+ov.innerHTML='<div class="mon-flash"></div>'+monCracks()+'<div class="mon-bite b1"></div><div class="mon-bite b2"></div><div class="mon-bite b3"></div><div class="mon-monster"><svg viewBox="0 0 100 100" aria-hidden="true">'+fresserG()+'</svg></div><div class="mon-roar">ROAAAR!<small>5 Fehler in Folge – der Kostenfresser frisst deine Lernseite!</small>'+(MON.stolen?'<span class="mon-steal">−'+MON.stolen+' Taler gefressen</span>':'')+'</div><div class="mon-hero" hidden></div>';
+root.appendChild(ov);MON.ov=ov;
+setTimeout(function(){ov.classList.add("hit");var pp=root.querySelector("#ufPanels");if(pp)pp.classList.add("mon-shake");if(!reduce){MON.saved=monTargets().map(function(e){var o={e:e,t:e.style.transform,tr:e.style.transition,f:e.style.filter};var x=(Math.random()-.5)*90,y=20+Math.random()*150,r=(Math.random()-.5)*50;e.style.transition="transform .8s cubic-bezier(.5,-.4,.6,1.4) "+(Math.random()*.35).toFixed(2)+"s, filter .6s";e.style.transform="translate("+x.toFixed(0)+"px,"+y.toFixed(0)+"px) rotate("+r.toFixed(0)+"deg)";e.style.filter="grayscale(.75) brightness(.7)";return o;});}},650);
+setTimeout(function(){var pp=root.querySelector("#ufPanels");if(pp)pp.classList.remove("mon-shake");},1500);
+setTimeout(monHero,2700);}
+function monHero(){var ov=MON.ov;if(!ov)return;var pool=[];MODS.forEach(function(m){pool=pool.concat(m.quiz);});var q=pool[Math.floor(Math.random()*pool.length)];MON.q=q;
+var h=ov.querySelector(".mon-hero");ov.classList.add("hero");h.hidden=false;
+h.innerHTML='<div class="mh-av"><span class="mh-cape"></span>'+hpAvatarMine()+'</div><div class="mh-bub"><b class="mh-t">'+esc(hpNm())+' zur Rettung! 🦸</b><p>Keine Panik, ich repariere alles!'+(MON.stolen?' Beantworte diese Frage richtig, dann hole ich dir auch deine <b>'+MON.stolen+' Taler</b> zurück:':' Kurze Aufwärmfrage, bevor ich loslege:')+'</p><p class="mh-q">'+q.q+'</p><div class="mh-opts">'+q.o.map(function(o,i){return '<button class="mh-o" data-mo="'+i+'">'+o+'</button>';}).join("")+'</div><button class="mh-skip" data-mo="skip">Nur reparieren</button></div>';
+setTimeout(function(){var b=h.querySelector(".mh-o");if(b)b.focus();},500);}
+function monAnswer(i){var ov=MON.ov,q=MON.q,h=ov.querySelector(".mh-bub");if(!h||h.classList.contains("done"))return;h.classList.add("done");
+var skip=i==="skip",ok=!skip&&+i===q.c;MON.ok=ok;
+h.querySelectorAll(".mh-o").forEach(function(b,j){b.disabled=true;if(j===q.c)b.classList.add("ok");else if(!skip&&j===+i)b.classList.add("no");});
+var t=skip?'<p>Alles klar, ich repariere sofort.'+(MON.stolen?' Die Taler hat der Kostenfresser aber schon verdaut.':'')+'</p>':ok?'<p class="mh-ok">Richtig! 🎉 '+(MON.stolen?'Ich hole dir deine '+MON.stolen+' Taler zurück!':'Damit hast du den Kostenfresser beeindruckt!')+'</p>':'<p class="mh-no">Fast! Richtig wäre: <b>'+q.o[q.c]+'</b>.</p><p class="small">'+q.e+'</p><p>Ich repariere die Seite trotzdem'+(MON.stolen?', aber die Taler sind leider verdaut.':'.')+'</p>';
+h.insertAdjacentHTML("beforeend",'<div class="mh-res">'+t+'<button class="btn-p mh-fix" data-mo="fix">Reparieren! ✨</button></div>');streak(ok);if(!skip)MON.wr=0;
+setTimeout(function(){var f=h.querySelector(".mh-fix");if(f)f.focus();},50);}
+function monRepair(){var ov=MON.ov;if(!ov||ov.classList.contains("fixing"))return;ov.classList.add("fixing");
+if(MON.ok&&MON.stolen){earn(MON.stolen);save();refreshHud();}
+MON.saved.forEach(function(o,k){o.e.style.transition="transform .7s cubic-bezier(.3,1.5,.5,1) "+(k*0.03).toFixed(2)+"s, filter .6s";o.e.style.transform=o.t||"";o.e.style.filter=o.f||"";});
+setTimeout(function(){MON.saved.forEach(function(o){o.e.style.transition=o.tr||"";});MON.saved=[];ov.classList.add("out");},1300);
+setTimeout(function(){ov.remove();MON.ov=null;MON.busy=false;toastAlways("Seite repariert!"+(MON.ok&&MON.stolen?" <b>+"+MON.stolen+" Taler</b> zurück.":"")+" Danke, "+esc(hpNm())+"!");if(S.hp&&typeof say==="function")say('<p class="hp-t">Puh, geschafft! 😅</p><p>Der Kostenfresser ist weg. Tipp: Bei mehreren Fehlern hintereinander lohnt es sich, die Themenkarte nochmal aufzuklappen oder mich nach der Formel zu fragen.</p>');},2100);}
+root.addEventListener("click",function(ev){var b=ev.target.closest&&ev.target.closest(".mon-ov [data-mo]");if(!b)return;var v=b.getAttribute("data-mo");if(v==="fix")monRepair();else monAnswer(v);});
+document.addEventListener("keydown",function(ev){if(ev.key==="Escape"&&MON.ov&&MON.ov.querySelector(".mon-hero:not([hidden])")){if(!MON.ov.querySelector(".mh-bub.done"))monAnswer("skip");monRepair();}});
+root.addEventListener("change",function(ev){if(ev.target.id==="ufMon"){S.mon=ev.target.checked;save();}});
 /* ===== Zustand ===== */
 var KEY="uf-klr-v1",S;
-function fresh(){return {t:{},q:{},g:{},c:{},f:{},xp:0,st:0,bst:0,b:{},gm:true,mm:0,lz:{},hp:false,co:0,room:null,inv:{},cards:{},pk:0};}
+function fresh(){return {t:{},q:{},g:{},c:{},f:{},xp:0,st:0,bst:0,b:{},gm:true,mm:0,lz:{},hp:false,co:0,hpd:0,mon:true,hpc:null,room:null,inv:{},cards:{},pk:0};}
 S=fresh();try{var raw=JSON.parse(localStorage.getItem(KEY)||"null");if(raw&&typeof raw==="object"){for(var k in S)if(raw[k]!=null)S[k]=raw[k];if(raw.co==null)S.co=S.xp||0;}}catch(e){}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 var LV=[[0,"Neuling"],[100,"Kassen-Azubi"],[250,"Kalkulations-Lehrling"],[450,"Kostenstellen-Kenner"],[700,"BAB-Baumeister"],[1000,"Deckungsbeitrags-Profi"],[1400,"Controlling-Ass"],[1900,"Risiko-Radar"],[2500,"KLR-Meister"],[3200,"Legende der Unternehmensführung"]];
@@ -1651,7 +1973,7 @@ a("s5",S.bst>=5);a("s15",S.bst>=15);a("quiz",Object.keys(S.q).some(function(k){r
 var rm=MODS.filter(function(m){return m.id==="rm";})[0];a("risk",rm&&modStats(rm).pct>=80);a("ready",overall()>=90);a("sammler",nCards()>=15);a("album",nCards()>=TCG.length);a("deko",S.room&&S.room.it&&S.room.it.length>=10);
 got.forEach(function(id){var b=BADGES.filter(function(x){return x[0]===id;})[0];toast("Abzeichen freigeschaltet: <b>"+b[1]+"</b>",true);});if(got.length)save();}
 function addXP(n,why){if(!n)return;var before=lvl(S.xp);S.xp+=n;earn(n);save();toast("+"+n+" XP"+(why?" · "+why:""));var after=lvl(S.xp);if(after>before)toast("Level "+(after+1)+" erreicht: <b>"+LV[after][1]+"</b>",true);refresh();}
-function streak(ok){if(ok){S.st++;if(S.st>S.bst)S.bst=S.st;if(S.st>0&&S.st%5===0)toast("Serie: "+S.st+" richtige Antworten in Folge!",true);}else S.st=0;save();refreshHud();}
+function streak(ok){if(typeof monCount==="function")monCount(ok);if(ok){S.st++;if(S.st>S.bst)S.bst=S.st;if(S.st>0&&S.st%5===0)toast("Serie: "+S.st+" richtige Antworten in Folge!",true);}else S.st=0;save();refreshHud();}
 var toastBox=document.createElement("div");toastBox.className="toasts";toastBox.setAttribute("aria-live","polite");root.appendChild(toastBox);
 function toast(h,gold){if(!S.gm)return;while(toastBox.children.length>=3)toastBox.firstChild.remove();var t=document.createElement("div");t.className="toast"+(gold?" gold":"");t.innerHTML=h;toastBox.appendChild(t);setTimeout(function(){t.remove();},gold?3600:2000);}
 /* ===== Fortschritt ===== */
@@ -1696,7 +2018,7 @@ h+='<label class="done-l"><input type="checkbox" id="cb-'+id+'"'+(done?" checked
 function quizHtml(qs,qid){var h='<div class="quiz" data-quiz="'+qid+'"><h3>Quiz</h3><div class="score">0 von '+qs.length+' richtig · '+qs.length+' offen</div>';qs.forEach(function(q,i){h+='<div class="q" data-c="'+q.c+'"><p class="qq">'+(i+1)+'. '+ab(q.q)+'</p><div class="opts">'+q.o.map(function(o,j){return '<button data-j="'+j+'">'+o+'</button>';}).join("")+'</div><div class="expl">'+ab(q.e)+'</div></div>';});return h+'<button class="btn-p q-reset">Quiz neu starten</button></div>';}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;}return a;}
 var PANELS=[];
-PANELS.push({id:"start",tab:"Start",html:'<div class="hpbox"><div class="av">'+helpyAvatar()+'</div><div class="txt"><b>Helpy – dein Lern-Buddy</b><div class="small">Erklärt dir bei jeder Rechenaufgabe Schritt für Schritt den Weg (Idee → Formel → Zahlen einsetzen), ohne die Lösung zu verraten, und erkennt typische Fehler.</div></div><button class="btn-p hp-on"></button></div><div class="lzstart"><div class="txt"><b>Wenig Zeit? Mut zur Lücke!</b><div class="small">Nur das Wichtigste in 6 Blöcken – kurz erklärt, mit Formeln, Rechenaufgaben und Blitz-Quiz.</div></div><button class="btn-x go-lz">Mut zur Lücke starten</button></div><div class="mmbox">'+'<figure class="meme"><div class="mt">Lernen ohne Memes</div><div class="mv">'+SC.cloud()+'</div><div class="mb">Lernen mit Memes</div></figure><div class="txt"><b>Meme-Modus</b><p class="small" style="margin:.2em 0 .6em">Zu jedem Thema ein Meme und Reaktions-Memes beim Rechnen – als eigene Animationen oder als Giphy-GIFs.</p><div class="mmbtns"><button class="mm-set" data-v="0">Aus</button><button class="mm-set" data-v="1">Eigene Memes</button><button class="mm-set" data-v="2">Giphy-Memes</button></div><p class="small" style="margin:.5em 0 0">Giphy-Memes laden echte GIFs und funktionieren nur in der selbst gehosteten Version (GitHub).</p></div></div><h2>Dein Lernstand</h2><div id="ufDash"></div><h2>So lernst du hier</h2><div class="intro">Jedes Kapitel hat aufklappbare <b>Themenkarten</b> mit Grafik, Kurz-Erklärung, Formeln, ausführlicher Erklärung und Klausur-Tipp. Darunter folgen <b>Rechenaufgaben</b> mit Prüffunktion, <b>Spiele</b> und ein <b>Quiz</b>. Gepunktet unterstrichene Abkürzungen wie '+ab("HKZ")+' oder '+ab("BEP")+' kannst du antippen. Unten rechts öffnest du jederzeit den <b>Karteikasten</b>.</div><h3>Lernplan</h3><ol><li><b>Kapitel 4 und 5</b> (BAB und Kalkulation) zuerst – hier liegen die meisten Rechenpunkte.</li><li><b>Kapitel 6</b> (Teilkosten): Deckungsbeitrag, Preisuntergrenzen, Engpass.</li><li><b>Kapitel 1 und 2</b>: Abgrenzung, kalkulatorische Kosten, Break-even.</li><li><b>Risikomanagement</b>: Prozess, Risikofelder, Matrix, fünf Strategien.</li><li><b>Kapitel 3 und 7</b> zum Abrunden, dann <b>Rechentrainer</b> und <b>Abschlussquiz</b>.</li></ol><div class="tip"><b>Rechen-Tipps für die Klausur:</b> Immer das Schema hinschreiben, Formel nennen, nach jedem Schritt auf Cent runden, Einheiten angeben (€, %, Stück) und am Ende eine Probe machen.</div><div class="g-only"><h3>Spielmodus</h3><p>Für richtige Antworten gibt es <b>XP</b>: Rechenfeld 10 XP, komplette Aufgabe +25 XP, Quizfrage 5 XP, gewonnenes Spiel 25 XP, gewusste Karteikarte 2 XP. Mit XP steigst du im <b>Level</b>; richtige Antworten in Folge bauen deine <b>Serie</b> auf; besondere Leistungen schalten <b>Abzeichen</b> frei. Wer lieber ohne lernt, schaltet den Spielmodus oben aus – der Fortschritt zählt trotzdem weiter.</p></div>'});
+PANELS.push({id:"start",tab:"Start",html:'<div class="hpbox"><div class="av">'+helpyAvatar()+'</div><div class="txt"><b>Helpy – dein Lern-Buddy</b><div class="small">Erklärt dir bei jeder Rechenaufgabe Schritt für Schritt den Weg (Idee → Formel → Zahlen einsetzen), ohne die Lösung zu verraten, und erkennt typische Fehler.</div></div><button class="btn-p hp-on"></button></div><div class="lzstart"><div class="txt"><b>Wenig Zeit? Mut zur Lücke!</b><div class="small">Nur das Wichtigste in 6 Blöcken – kurz erklärt, mit Formeln, Rechenaufgaben und Blitz-Quiz.</div></div><button class="btn-x go-lz">Mut zur Lücke starten</button></div><div class="mmbox">'+'<figure class="meme"><div class="mt">Lernen ohne Memes</div><div class="mv">'+SC.cloud()+'</div><div class="mb">Lernen mit Memes</div></figure><div class="txt"><b>Meme-Modus</b><p class="small" style="margin:.2em 0 .6em">Zu jedem Thema ein Meme und Reaktions-Memes beim Rechnen – als eigene Animationen oder als Giphy-GIFs.</p><div class="mmbtns"><button class="mm-set" data-v="0">Aus</button><button class="mm-set" data-v="1">Eigene Memes</button><button class="mm-set" data-v="2">Giphy-Memes</button></div><p class="small" style="margin:.5em 0 0">Giphy-Memes laden echte GIFs und funktionieren nur in der selbst gehosteten Version (GitHub).</p></div></div><h2>Dein Lernstand</h2><div id="ufDash"></div><h2>So lernst du hier</h2><div class="intro">Jedes Kapitel hat aufklappbare <b>Themenkarten</b> mit Grafik, Kurz-Erklärung, Formeln, ausführlicher Erklärung und Klausur-Tipp. Darunter folgen <b>Rechenaufgaben</b> mit Prüffunktion, <b>Spiele</b> und ein <b>Quiz</b>. Gepunktet unterstrichene Abkürzungen wie '+ab("HKZ")+' oder '+ab("BEP")+' kannst du antippen. Unten rechts öffnest du jederzeit den <b>Karteikasten</b>.</div><h3>Lernplan</h3><ol><li><b>Kapitel 4 und 5</b> (BAB und Kalkulation) zuerst – hier liegen die meisten Rechenpunkte.</li><li><b>Kapitel 6</b> (Teilkosten): Deckungsbeitrag, Preisuntergrenzen, Engpass.</li><li><b>Kapitel 1 und 2</b>: Abgrenzung, kalkulatorische Kosten, Break-even.</li><li><b>Risikomanagement</b>: Prozess, Risikofelder, Matrix, fünf Strategien.</li><li><b>Kapitel 3 und 7</b> zum Abrunden, dann <b>Rechentrainer</b> und <b>Abschlussquiz</b>.</li></ol><div class="tip"><b>Rechen-Tipps für die Klausur:</b> Immer das Schema hinschreiben, Formel nennen, nach jedem Schritt auf Cent runden, Einheiten angeben (€, %, Stück) und am Ende eine Probe machen.</div><div class="g-only"><h3>Spielmodus</h3><p>Für richtige Antworten gibt es <b>XP</b>: Rechenfeld 10 XP, komplette Aufgabe +25 XP, Quizfrage 5 XP, gewonnenes Spiel 25 XP, gewusste Karteikarte 2 XP. Mit XP steigst du im <b>Level</b>; richtige Antworten in Folge bauen deine <b>Serie</b> auf; besondere Leistungen schalten <b>Abzeichen</b> frei. Wer lieber ohne lernt, schaltet den Spielmodus oben aus – der Fortschritt zählt trotzdem weiter.</p><p><b>Achtung, Kostenfresser!</b> Bei 5 falschen Antworten hintereinander greift er an und zerlegt die Seite – Helpy eilt zur Rettung. <label class="tog"><input type="checkbox" id="ufMon" checked> Monster-Angriffe</label></p></div>'});
 PANELS.push({id:"lz",tab:"Mut zur Lücke",html:lzHtml()});
 MODS.forEach(function(m){var h='<h2>'+m.title+'</h2><div class="modhead" data-m="'+m.id+'"><span class="small">Kapitel-Fortschritt</span><div class="bar blue"><i></i></div><span class="pct">0 %</span></div><div class="intro">'+ab(m.intro)+'</div><p class="small"><button class="openall">Alle aufklappen</button> <button class="closeall">Alle zuklappen</button></p>';
 m.topics.forEach(function(t,i){h+=topicCard(m,t,i);});
@@ -1708,17 +2030,17 @@ h+=quizHtml(m.quiz,m.id);PANELS.push({id:m.id,tab:m.tab,html:h,mod:1});});
 (function(){var h='<h2>Rechentrainer</h2><div class="intro">Alle Rechenaufgaben an einem Ort – jede mit „Neue Zahlen“ beliebig oft wiederholbar. Gelöste Aufgaben zählen zum Fortschritt des jeweiligen Kapitels.</div><div class="calcfilter"><button class="on" data-cf="all">Alle</button>';MODS.forEach(function(m){if(m.calcs&&m.calcs.length)h+='<button data-cf="'+m.id+'">'+m.tab+'</button>';});h+='<button class="btn-x c-random" style="margin-left:auto">Zufallsaufgabe</button></div><div id="ufRandom"></div><div id="ufCalcList">';
 Object.keys(CALCS).forEach(function(id){h+='<div data-cm="'+CALCS[id].m+'">'+calcHtml(id,false)+'</div>';});h+='</div>';PANELS.push({id:"rechnen",tab:"Rechentrainer",html:h});})();
 PANELS.push({id:"quiz",tab:"Abschlussquiz",html:'<h2>Abschlussquiz</h2><div class="intro">15 zufällige Fragen aus allen Kapiteln und dem Risikomanagement. „Neue Fragen“ mischt neu.</div><div id="ufFinal"></div><button class="btn-x" id="ufNewFinal">Neue Fragen</button>'});
-roomPanels();
+roomPanels();hpShopPanel();
 (function(){var h='<h2>Glossar</h2><div class="intro">Alle Abkürzungen und Fachbegriffe auf einen Blick.</div><label class="lab" for="ufSearch">Suchen</label><input id="ufSearch" class="search" type="search" placeholder="z. B. HKZ oder Wagnis"><h3>Abkürzungen</h3><dl class="gl">';Object.keys(ABBR).sort(function(a,b){return a.toLowerCase()<b.toLowerCase()?-1:1;}).forEach(function(k){h+='<dt>'+esc(k)+'</dt><dd>'+esc(ABBR[k])+'</dd>';});h+='</dl><h3>Fachbegriffe</h3><dl class="gl">';GLOSS.forEach(function(g){h+='<dt>'+g[0]+'</dt><dd>'+ab(g[1])+'</dd>';});PANELS.push({id:"glossar",tab:"Glossar",html:h+'</dl>'});})();
 function buildFinal(){var pool=[];MODS.forEach(function(m){pool=pool.concat(m.quiz);});root.querySelector("#ufFinal").innerHTML=quizHtml(shuffle(pool).slice(0,15),"final");}
 var tabs=root.querySelector("#ufTabs"),pans=root.querySelector("#ufPanels"),th="",ph="";
-PANELS.forEach(function(p){th+='<button role="tab" data-p="'+p.id+'" aria-selected="false"'+(p.id==="zimmer"||p.id==="karten"?' class="g-only"':'')+'>'+p.tab+(p.mod?'<span class="pc">0%</span>':'')+'</button>';ph+='<section class="panel" role="tabpanel" data-p="'+p.id+'">'+p.html+'</section>';});tabs.innerHTML=th;pans.innerHTML=ph;
+PANELS.forEach(function(p){th+='<button role="tab" data-p="'+p.id+'" aria-selected="false"'+(p.id==="zimmer"||p.id==="karten"||p.id==="hpshop"?' class="g-only"':'')+'>'+p.tab+(p.mod?'<span class="pc">0%</span>':'')+'</button>';ph+='<section class="panel" role="tabpanel" data-p="'+p.id+'">'+p.html+'</section>';});tabs.innerHTML=th;pans.innerHTML=ph;
 var modal=document.createElement("div");modal.className="modal";modal.hidden=true;modal.setAttribute("role","dialog");modal.setAttribute("aria-modal","true");modal.innerHTML='<div class="mbox"><button class="mclose" aria-label="Schließen">×</button><div class="mc"></div></div>';root.appendChild(modal);
 var fab=document.createElement("button");fab.className="fab";fab.textContent="Karteikasten";root.appendChild(fab);
 var tip=document.createElement("div");tip.id="ufTip";tip.hidden=true;document.body.appendChild(tip);
 function openModal(h){if(HP.el&&S.hp){HP.min=true;HP.el.classList.add("min");}var mp=root.querySelector(".mpop");if(mp)mp.hidden=true;modal.querySelector(".mc").innerHTML=h;modal.hidden=false;fab.hidden=true;modal.scrollTop=0;setTimeout(function(){modal.querySelector(".mclose").focus();},30);}
 function closeModal(){if(RUN)lastRunM=RUN.m;stopRun();modal.hidden=true;fab.hidden=false;game=null;refresh();}
-function show(id){if(typeof helpyTab==="function"&&S.hp&&HP.el)helpyTab(id);root.querySelectorAll(".panel").forEach(function(p){p.classList.toggle("on",p.getAttribute("data-p")===id);});tabs.querySelectorAll("button").forEach(function(b){var on=b.getAttribute("data-p")===id;b.setAttribute("aria-selected",on?"true":"false");if(on&&b.scrollIntoView)try{b.scrollIntoView({block:"nearest",inline:"nearest"});}catch(e){}});try{sessionStorage.setItem(KEY+"-tab",id);}catch(e){}if(id==="zimmer")renderRoom();if(id==="karten")renderCards();}
+function show(id){if(typeof helpyTab==="function"&&S.hp&&HP.el)helpyTab(id);root.querySelectorAll(".panel").forEach(function(p){p.classList.toggle("on",p.getAttribute("data-p")===id);});tabs.querySelectorAll("button").forEach(function(b){var on=b.getAttribute("data-p")===id;b.setAttribute("aria-selected",on?"true":"false");if(on&&b.scrollIntoView)try{b.scrollIntoView({block:"nearest",inline:"nearest"});}catch(e){}});try{sessionStorage.setItem(KEY+"-tab",id);}catch(e){}if(id==="zimmer")renderRoom();if(id==="karten")renderCards();if(id==="hpshop")renderHpShop();}
 /* ===== Spiele ===== */
 var game=null;function modBy(id){return MODS.filter(function(m){return m.id===id;})[0];}
 function win(gid,txt){var first=!S.g[gid];S.g[gid]=true;save();modal.querySelector(".wbox").innerHTML='<div class="win">'+txt+'</div>';addXP(first?25:5,"Spiel");checkBadges();}
@@ -1761,7 +2083,7 @@ function hpSync(){root.classList.toggle("hpopen",!!S.hp&&!HP.min);}
 /* ===== Start ===== */
 root.classList.toggle("nogame",!S.gm);root.querySelector("#ufGame").checked=!!S.gm;S.mm=S.mm===true?1:(+S.mm||0);if(S.mm===2&&!gifOK())S.mm=1;applyMeme();
 var st0="start";try{var ss=sessionStorage.getItem(KEY+"-tab");if(ss&&root.querySelector('.panel[data-p="'+ss+'"]'))st0=ss;}catch(e){}
-buildFinal();show(st0);refresh();applyHelpy();if(S.hp)helpyGreet();
+buildFinal();show(st0);refresh();applyHelpy();hpApply();var mcb=root.querySelector("#ufMon");if(mcb)mcb.checked=S.mon!==false;if(S.hp)helpyGreet();
 /* ===== Ereignisse ===== */
 function showTip(el){var k=el.getAttribute("data-ab");tip.innerHTML="<b>"+esc(k)+"</b>: "+esc(ABBR[k]||"");tip.hidden=false;var r=el.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight,x=Math.min(Math.max(8,r.left+r.width/2-w/2),window.innerWidth-w-8),y=r.top-h-8;if(y<8)y=r.bottom+8;tip.style.left=x+"px";tip.style.top=y+"px";}
 function hideTip(){tip.hidden=true;}
@@ -1793,7 +2115,7 @@ if((b=t.closest(".opts button"))){if(b.disabled)return;var q=b.closest(".q"),cc=
 if((b=t.closest(".q-reset"))){var qz=b.closest(".quiz");qz.querySelectorAll(".q").forEach(function(q){q.removeAttribute("data-a");q.querySelector(".expl").classList.remove("on");q.querySelectorAll(".opts button").forEach(function(x){x.disabled=false;x.classList.remove("ok","no");});});score(qz);return;}
 if(t.id==="ufNewFinal"){buildFinal();return;}
 if((b=t.closest(".hp-act"))){var aa=b.getAttribute("data-a");if(aa==="newnum"&&HP.ctx&&HP.ctx.box&&HP.ctx.box.isConnected){var bx2=HP.ctx.box;HP.ctx=null;calcNew(bx2);say("Neue Zahlen! Tipp in das erste Feld, dann legen wir los.",[]);}else helpyAct(aa);return;}
-if(t.closest(".hp-face")||t.closest(".hp-min")){HP.min=!HP.min;HP.el.classList.toggle("min",HP.min);hpSync();return;}
+if(t.closest(".hp-face")||t.closest(".hp-min")){HP.min=!HP.min;HP.el.classList.toggle("min",HP.min);hpSync();if(t.closest(".hp-face"))hpTap("face");return;}
 if(t.closest(".hp-on")){setHelpy(!S.hp);return;}
 if(t.closest(".go-lz")){show("lz");var tp=root.getBoundingClientRect().top+window.pageYOffset-8;if(window.pageYOffset>tp)window.scrollTo(0,tp);return;}
 if((b=t.closest(".mm-set"))){setMeme(+b.getAttribute("data-v"));return;}
@@ -1809,7 +2131,7 @@ root.addEventListener("focusin",function(ev){var a=ev.target.closest&&ev.target.
 root.addEventListener("focusout",function(ev){if(ev.target.closest&&ev.target.closest(".ab"))hideTip();});
 root.addEventListener("keydown",function(ev){if(ev.key==="Enter"&&ev.target.closest&&ev.target.closest(".fld input")){ev.preventDefault();calcCheck(ev.target.closest(".calc"));}});
 document.addEventListener("keydown",function(ev){if(modal.hidden)return;if(ev.key==="Escape"){closeModal();return;}if(fc.cur&&modal.querySelector(".fc")){if(ev.key===" "&&!(document.activeElement&&document.activeElement.tagName==="BUTTON"&&!document.activeElement.closest(".fc"))){ev.preventDefault();modal.querySelector(".fc").classList.toggle("flip");}else if(ev.key==="ArrowRight")rate(true);else if(ev.key==="ArrowLeft")rate(false);}});
-root.addEventListener("change",function(ev){var t=ev.target;if(t.id==="ufGame"){S.gm=t.checked;save();root.classList.toggle("nogame",!S.gm);var cur=root.querySelector(".panel.on");if(!S.gm&&cur&&/^(zimmer|karten)$/.test(cur.getAttribute("data-p")))show("start");return;}if(t.id==="ufMemeSel"){setMeme(+t.value);return;}if(t.id==="ufHelpy"){setHelpy(t.checked);return;}if(t.classList&&t.classList.contains("lzcb")){var bl=t.closest(".lzb"),li=+bl.getAttribute("data-lz");if(!S.lz)S.lz={};var was2=!!S.lz[li];S.lz[li]=t.checked;bl.classList.toggle("done",t.checked);save();var dn=0;LZ.forEach(function(x,i){if(S.lz[i])dn++;});root.querySelector("#lzBar").style.width=Math.round(dn/LZ.length*100)+"%";root.querySelector("#lzPct").textContent=dn+"/"+LZ.length;if(t.checked&&!was2){addXP(10,"Block erledigt");if(dn===LZ.length)toast("Mut zur Lücke komplett – du bist bereit!",true);}return;}
+root.addEventListener("change",function(ev){var t=ev.target;if(t.id==="ufGame"){S.gm=t.checked;save();root.classList.toggle("nogame",!S.gm);var cur=root.querySelector(".panel.on");if(!S.gm&&cur&&/^(zimmer|karten|hpshop)$/.test(cur.getAttribute("data-p")))show("start");return;}if(t.id==="ufMemeSel"){setMeme(+t.value);return;}if(t.id==="ufHelpy"){setHelpy(t.checked);return;}if(t.classList&&t.classList.contains("lzcb")){var bl=t.closest(".lzb"),li=+bl.getAttribute("data-lz");if(!S.lz)S.lz={};var was2=!!S.lz[li];S.lz[li]=t.checked;bl.classList.toggle("done",t.checked);save();var dn=0;LZ.forEach(function(x,i){if(S.lz[i])dn++;});root.querySelector("#lzBar").style.width=Math.round(dn/LZ.length*100)+"%";root.querySelector("#lzPct").textContent=dn+"/"+LZ.length;if(t.checked&&!was2){addXP(10,"Block erledigt");if(dn===LZ.length)toast("Mut zur Lücke komplett – du bist bereit!",true);}return;}
 var c=t.closest&&t.closest(".done-l");if(!c)return;var card=t.closest(".card"),id=card.getAttribute("data-t"),was=!!S.t[id];S.t[id]=t.checked;card.classList.toggle("done",t.checked);save();if(t.checked&&!was)addXP(5,"Thema gelernt");else refresh();checkBadges();});
 root.addEventListener("input",function(ev){if(ev.target.id!=="ufSearch")return;var v=ev.target.value.toLowerCase();root.querySelectorAll(".gl dt").forEach(function(dt){var dd=dt.nextElementSibling,hit=!v||(dt.textContent+" "+dd.textContent).toLowerCase().indexOf(v)>=0;dt.hidden=dd.hidden=!hit;});});
 })();
