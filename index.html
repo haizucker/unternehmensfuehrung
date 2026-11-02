@@ -628,6 +628,93 @@ color-scheme:dark;font-family:var(--fb);font-size:16px;line-height:1.55;color:va
 @keyframes fixStars{from{opacity:0;transform:scale(.5)}50%{opacity:1}to{opacity:0;transform:scale(1.6) translateY(-40px)}}
 @media (max-width:520px){#uf .mon-hero{flex-direction:column;align-items:center;top:54%}#uf .mh-av{width:84px;height:84px}#uf .mon-monster{width:40vw;bottom:2%}}
 @media (prefers-reduced-motion:reduce){#uf .mon-shake,#uf .mon-monster svg,#uf .mh-av,#uf .fx-pulse .hp-face,#uf .fx-fire .hp-face,#uf .fx-rainbow .hp-face:before,#uf .fx-orbit .hp-face:after{animation:none}}
+/* Kartenduell */
+#uf .du-team{display:grid;grid-template-columns:repeat(3,minmax(0,170px));gap:12px}
+#uf .du-slot{position:relative;min-width:0}
+#uf .du-slot .mini2{width:100%;margin:5px 0;cursor:default}
+#uf .du-loan{position:absolute;top:-2px;right:-4px;background:var(--xp);color:#2a1500;font-weight:700;font-size:.72em;padding:2px 8px;border-radius:99px;transform:rotate(6deg)}
+#uf .du-pick summary{cursor:pointer;font-weight:600;margin:6px 0}
+#uf .du-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;margin:8px 0}
+#uf .du-pc{display:flex;flex-direction:column;gap:3px;align-items:stretch;text-align:left;background:var(--s1);border:2px solid var(--line);border-radius:10px;padding:5px;color:inherit;font:inherit;font-size:.8em;cursor:pointer;min-width:0}
+#uf .du-pc.on{border-color:var(--tc);box-shadow:0 0 0 2px var(--tc)}
+#uf .du-pcart{width:100%;height:auto;display:block;border-radius:4px}
+#uf .du-pc b{line-height:1.15;overflow-wrap:anywhere}
+#uf .du-pc span{opacity:.75}
+#uf .du-lv{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+#uf .du-lvb{display:flex;flex-direction:column;gap:2px;align-items:flex-start;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,var(--s2),var(--s1));border:1px solid var(--line);color:inherit;font:inherit;cursor:pointer;text-align:left}
+#uf .du-lvb:hover{border-color:var(--ac)}
+#uf .du-lvb b{font-family:var(--fd);font-size:1.3em}
+#uf .du-lvb span{font-size:.85em;opacity:.8}
+#uf .du-lvb .du-pr{color:var(--gold);opacity:1;font-weight:600}
+#uf .du-online{background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+#uf .du-online input{background:var(--s2);border:1px solid var(--line);color:inherit;border-radius:10px;padding:8px 10px;font:inherit}
+#uf #ufDuelName{width:min(260px,100%);display:block;margin:4px 0 10px}
+#uf #ufDuelCode{width:110px;text-transform:uppercase;letter-spacing:.15em;font-family:var(--fm)}
+#uf .du-onbtns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#uf .du-status{margin:10px 0 4px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#uf .du-status:empty{display:none}
+#uf .du-status.err{color:var(--no)}
+#uf .du-status.ok{color:var(--ok)}
+#uf .du-code{font-family:var(--fm);font-size:2em;letter-spacing:.18em;color:var(--gold);background:#061238;border:2px dashed var(--gold);border-radius:10px;padding:2px 12px}
+/* Arena */
+#uf .du{display:flex;flex-direction:column;gap:10px}
+#uf .du-top{display:flex;justify-content:space-between;align-items:center;padding-right:44px;font-family:var(--fd);font-size:1.15em}
+#uf .du-mode{opacity:.75;font-size:.85em}
+#uf .du-field{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
+#uf .du-vs{font-family:Anton,Impact,sans-serif;font-size:2em;color:var(--xp);text-shadow:0 3px 0 #2a1500}
+#uf .du-side{position:relative;min-width:0}
+#uf .du-side.me{order:-1}#uf .du-side.opp{order:1}
+#uf .du-card{display:flex;gap:10px;align-items:center;background:linear-gradient(135deg,color-mix(in srgb,var(--tc) 22%,#0b1a46),#0b1a46);border:2px solid var(--tc);border-radius:14px;padding:8px;transition:transform .3s}
+#uf .du-card.ko{filter:grayscale(1);opacity:.6}
+#uf .du-art{flex:0 0 46%;max-width:150px;border-radius:6px;overflow:hidden;border:2px solid #3a2a14;background:#3a2a14}
+#uf .du-pic{display:block;width:100%;height:auto}
+#uf .du-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+#uf .du-pn{font-size:.72em;opacity:.75;text-transform:uppercase;letter-spacing:.06em}
+#uf .du-info b{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:1em;line-height:1.1}
+#uf .du-hp{height:10px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden}
+#uf .du-hp i{display:block;height:100%;transition:width .8s ease}
+#uf .du-kp{font-family:var(--fm);font-size:.8em}
+#uf .du-dots{display:flex;gap:4px}
+#uf .du-dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.4)}
+#uf .du-dots i.on{background:var(--ok)}
+#uf .du-dots i.ko{background:var(--no);opacity:.6}
+#uf .du-side.hit .du-card{animation:duHit .5s ease-in-out 2}
+@keyframes duHit{25%{transform:translateX(-8px) rotate(-2deg)}75%{transform:translateX(8px) rotate(2deg)}}
+#uf .du-opp-st{position:absolute;right:8px;bottom:-9px;font-size:.72em;background:var(--s3);border:1px solid var(--line);border-radius:99px;padding:1px 8px}
+#uf .du-mid{background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+#uf .du-timer{height:8px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
+#uf .du-timer i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--no),var(--gold),var(--ok));transition:width .2s linear}
+#uf .du-sec{float:right;font-family:var(--fm);font-size:.8em;opacity:.8;margin-top:2px}
+#uf .du-q{font-weight:700;font-size:1.05em;margin:.6em 0}
+#uf .du-opts{display:grid;gap:7px}
+#uf .du-o{text-align:left;background:var(--s2);border:2px solid var(--line);color:inherit;border-radius:10px;padding:9px 12px;font:inherit;cursor:pointer}
+#uf .du-o:hover:not(:disabled){border-color:var(--ac)}
+#uf .du-o.pick{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 18%,var(--s2))}
+#uf .du-o:disabled{cursor:default;opacity:.85}
+#uf .du-big{font-family:var(--fd);font-size:1.25em;margin:.4em 0}
+#uf .du-right b{color:var(--ok)}
+#uf .du-who{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+#uf .du-who span{padding:3px 10px;border-radius:99px;font-size:.85em;border:1px solid}
+#uf .du-who .ok{color:var(--ok);border-color:var(--ok)}
+#uf .du-who .no{color:var(--no);border-color:var(--no)}
+#uf .du-ev{margin:8px 0;border-left:4px solid var(--tc);background:rgba(255,255,255,.04);border-radius:0 10px 10px 0;padding:8px 10px;animation:duPop .4s cubic-bezier(.3,1.5,.5,1)}
+@keyframes duPop{from{transform:scale(.9);opacity:0}}
+#uf .du-dmg{color:var(--no);font-weight:800}
+#uf .du-ko{background:var(--no);color:#fff;font-weight:800;padding:0 7px;border-radius:6px}
+#uf .du-lern{margin-top:6px;background:#f4e8c8;color:#3a2a14;border-radius:8px;padding:7px 10px;font-size:.92em}
+#uf .du-lern span{display:block;font-family:Caveat,cursive;font-size:1.15em;font-weight:700;color:#8a5a14;line-height:1}
+#uf .du-exp{margin:8px 0;font-size:.92em}
+#uf .du-exp summary{cursor:pointer;opacity:.85}
+#uf .du-next{margin-top:8px}
+#uf .du-auto{margin-top:8px}
+#uf .du-end{text-align:center;padding:14px;border-radius:14px;margin-top:10px;background:var(--s2);border:2px solid var(--line)}
+#uf .du-end b{display:block;font-family:Anton,Impact,sans-serif;font-size:2.2em;letter-spacing:.02em}
+#uf .du-end.win{border-color:var(--gold);background:radial-gradient(circle at 50% 0,rgba(255,210,63,.25),var(--s2) 70%)}
+#uf .du-end.win b{color:var(--gold)}
+#uf .du-end.lose b{color:var(--no)}
+#uf .du-rew{display:inline-block;margin-top:4px;color:var(--gold);font-weight:800;font-size:1.2em}
+#uf .du-btns{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:8px}
+@media (max-width:620px){#uf .du-field{grid-template-columns:1fr;gap:6px}#uf .du-vs{display:none}#uf .du-art{flex-basis:38%}#uf .du-team{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}#uf .du-slot .mini2 .m2-hd b{font-size:10.5px}}
 /* Meme-Modus */
 #uf .meme{display:none;margin:12px auto;max-width:360px;background:#000;border-radius:12px;overflow:hidden;border:2px solid #222}
 #uf.memeon .meme,#uf .mpop .meme{display:block}
@@ -1920,7 +2007,7 @@ if(S.hp)say('<p class="hp-t">🎶 Woo-hoo!</p><p>'+msg+'</p>');else if(src!=="fa
 root.addEventListener("click",function(ev){var b=ev.target.closest&&ev.target.closest(".hpw-av");if(b)hpTap("prev");});
 /* ===== Kostenfresser-Angriff: 5 Fehler in Folge -> Seite wird zerlegt, Helpy repariert ===== */
 var MON={wr:0,last:0,busy:false,stolen:0,saved:[],ov:null,q:null,ok:false};
-function monCount(ok){if(ok){MON.wr=0;return;}if(typeof RUN!=="undefined"&&RUN)return;MON.wr++;
+function monCount(ok){if(ok){MON.wr=0;return;}if(typeof DUEL!=="undefined"&&DUEL)return;if(typeof RUN!=="undefined"&&RUN)return;MON.wr++;
 if(MON.wr>=5&&S.gm&&S.mon!==false&&!MON.busy&&Date.now()-MON.last>180000){MON.wr=0;setTimeout(monAttack,900);}}
 function monTargets(){var list=[];Array.prototype.forEach.call(root.children,function(e){if(e.id==="ufPanels"||e.matches(".helpy,.modal,.fab,.toasts,.mon-ov,svg,script,noscript")||e.hidden)return;list.push(e);});
 var pan=root.querySelector(".panel.on");if(pan)Array.prototype.forEach.call(pan.children,function(e){list.push(e);});
@@ -1956,21 +2043,137 @@ setTimeout(function(){ov.remove();MON.ov=null;MON.busy=false;toastAlways("Seite 
 root.addEventListener("click",function(ev){var b=ev.target.closest&&ev.target.closest(".mon-ov [data-mo]");if(!b)return;var v=b.getAttribute("data-mo");if(v==="fix")monRepair();else monAnswer(v);});
 document.addEventListener("keydown",function(ev){if(ev.key==="Escape"&&MON.ov&&MON.ov.querySelector(".mon-hero:not([hidden])")){if(!MON.ov.querySelector(".mh-bub.done"))monAnswer("skip");monRepair();}});
 root.addEventListener("change",function(ev){if(ev.target.id==="ufMon"){S.mon=ev.target.checked;save();}});
+/* ===== Kartenduell: Quiz-Kampf mit Sammelkarten (gegen Computer oder online per Raumcode) ===== */
+var ONLINE=/*ONLINE*/true/*END*/;
+var DUEL=null,DSEL=null,DCONN=null,DPEER=null,DT={q:null,tick:null,cpu:null,next:null},DCODE="";
+var DQ_TIME=20000,DFAST=8000;
+var DLV=[["azubi","Azubi",.55,[6000,12500],["C","C","U"],20],["fachwirt","Fachwirt",.75,[4000,9000],["C","U","R"],30],["profi","Profi",.9,[2500,6000],["U","R","R"],45]];
+var DPOOL=null;function dPool(){if(!DPOOL){DPOOL=[];MODS.forEach(function(m){m.quiz.forEach(function(q){DPOOL.push(q);});});}return DPOOL;}
+function dStats(){if(!S.duel||typeof S.duel!=="object")S.duel={};var d=S.duel;["w","l","ow","ol","st","best"].forEach(function(k){if(typeof d[k]!=="number")d[k]=0;});if(typeof d.nm!=="string")d.nm="";if(!Array.isArray(d.team))d.team=[];return d;}
+function ownedIds(){return TCG.filter(function(c){return S.cards&&S.cards[c[0]];}).map(function(c){return c[0];});}
+function dTeam(){var d=dStats(),own=ownedIds(),t=d.team.filter(function(id){return own.indexOf(id)>=0;}).slice(0,3),pool;
+while(t.length<3){pool=own.filter(function(x){return t.indexOf(x)<0;});if(!pool.length)pool=TCG.filter(function(c){return c[4]==="C"&&t.indexOf(c[0])<0;}).map(function(c){return c[0];});t.push(pool[0]);}return t;}
+function dLoan(id){return !(S.cards&&S.cards[id]);}
+function dCpuTeam(lv){var t=[];lv[4].forEach(function(r){var pool=TCG.filter(function(c){return c[4]===r&&t.indexOf(c[0])<0;});t.push(pool[Math.floor(Math.random()*pool.length)][0]);});return t;}
+function dPlayer(name,team){return {name:name,team:team,hp:team.map(function(id){return TCGM[id][3];}),act:0};}
+function dClear(){["q","tick","cpu","next"].forEach(function(k){clearTimeout(DT[k]);clearInterval(DT[k]);DT[k]=null;});}
+function dSnap(){return JSON.parse(JSON.stringify({P:DUEL.P,round:DUEL.round,q:DUEL.q,ev:DUEL.ev,phase:DUEL.phase,win:DUEL.win,used:DUEL.used,ans:DUEL.ans}));}
+function dSend(o){try{if(DCONN&&DCONN.open)DCONN.send(o);}catch(e){}}
+/* --- Spielablauf --- */
+function duelStartCpu(li){var lv=DLV[li],d=dStats();DUEL={mode:"cpu",lv:li,me:0,P:[dPlayer(d.nm||"Du",dTeam()),dPlayer("Computer ("+lv[1]+")",dCpuTeam(lv))],round:0,q:-1,ans:[null,null],ev:[],phase:"intro",win:-1,used:[]};
+openModal('<div id="ufDuel"></div>');dRender();DT.next=setTimeout(dNextQ,1600);}
+function dPickQ(){var P=dPool(),i,n=0;do{i=Math.floor(Math.random()*P.length);n++;}while(DUEL.used.indexOf(i)>=0&&n<60);DUEL.used.push(i);if(DUEL.used.length>40)DUEL.used.shift();return i;}
+function dNextQ(){if(!DUEL||DUEL.phase==="end")return;dClear();DUEL.round++;DUEL.q=dPickQ();DUEL.ans=[null,null];DUEL.ev=[];DUEL.phase="q";
+if(DUEL.mode==="host")dSend({type:"q",q:DUEL.q,round:DUEL.round});dBeginQ();}
+function dBeginQ(){DUEL.qStart=Date.now();DUEL.myAns=null;dRender();
+DT.tick=setInterval(function(){var b=document.querySelector("#ufDuel .du-timer i");if(!DUEL||DUEL.phase!=="q"){clearInterval(DT.tick);return;}var left=Math.max(0,DQ_TIME-(Date.now()-DUEL.qStart));if(b)b.style.width=(left/DQ_TIME*100)+"%";var s=document.querySelector("#ufDuel .du-sec");if(s)s.textContent=Math.ceil(left/1000)+" s";if(left<=0){clearInterval(DT.tick);if(DUEL.myAns==null)dAnswer(-1);}},200);
+if(DUEL.mode==="cpu"){var lv=DLV[DUEL.lv],q=dPool()[DUEL.q],ok=Math.random()<lv[2],t=lv[3][0]+Math.random()*(lv[3][1]-lv[3][0]),wrong=q.o.map(function(_,i){return i;}).filter(function(i){return i!==q.c;});
+DT.cpu=setTimeout(function(){if(!DUEL||DUEL.phase!=="q")return;DUEL.ans[1]={j:ok?q.c:wrong[Math.floor(Math.random()*wrong.length)],t:Math.round(t)};dMaybeResolve();var w=document.querySelector("#ufDuel .du-opp-st");if(w)w.textContent="hat geantwortet";},t);}
+if(DUEL.mode==="host")DT.q=setTimeout(function(){if(!DUEL||DUEL.phase!=="q")return;if(!DUEL.ans[1])DUEL.ans[1]={j:-1,t:DQ_TIME};if(!DUEL.ans[0])DUEL.ans[0]={j:-1,t:DQ_TIME};dMaybeResolve();},DQ_TIME+2500);}
+function dAnswer(j){if(!DUEL||DUEL.phase!=="q"||DUEL.myAns!=null)return;var t=j<0?DQ_TIME:Math.min(DQ_TIME,Date.now()-DUEL.qStart);DUEL.myAns={j:j,t:t};
+var q=dPool()[DUEL.q];document.querySelectorAll("#ufDuel .du-o").forEach(function(b,i){b.disabled=true;if(i===j)b.classList.add("pick");});var st=document.querySelector("#ufDuel .du-wait");if(st)st.textContent=j<0?"Zeit abgelaufen!":"Antwort eingeloggt – warte auf den Gegner …";
+if(DUEL.mode==="guest"){dSend({type:"ans",round:DUEL.round,j:j,t:t});return;}DUEL.ans[0]=DUEL.myAns;dMaybeResolve();}
+function dMaybeResolve(){if(!DUEL||DUEL.phase!=="q"||!DUEL.ans[0]||!DUEL.ans[1])return;dClear();dResolve();
+if(DUEL.mode==="host")dSend({type:"res",D:dSnap()});dAfterRes();}
+function dHit(side,atk,factor){var D=DUEL,A=D.P[side],B=D.P[1-side];if(A.act>=3||B.act>=3)return;if(A.hp[A.act]<=0)return;var c=TCGM[A.team[A.act]],a=c[6][atk],dmg=Math.max(5,Math.round(a[1]*factor/5)*5),ko;B.hp[B.act]=Math.max(0,B.hp[B.act]-dmg);ko=B.hp[B.act]<=0;D.ev.push({s:side,id:c[0],atk:atk,dmg:dmg,ko:ko,def:B.team[B.act]});}
+function dResolve(){var D=DUEL,q=dPool()[D.q],a=D.ans,ok=[a[0].j===q.c,a[1].j===q.c];D.ev=[];
+if(ok[0]&&ok[1]){var f=a[0].t<=a[1].t?0:1;dHit(f,a[f].t<DFAST?1:0,1);dHit(1-f,0,.5);}
+else if(ok[0])dHit(0,a[0].t<DFAST?1:0,1);else if(ok[1])dHit(1,a[1].t<DFAST?1:0,1);
+D.P.forEach(function(p){while(p.act<3&&p.hp[p.act]<=0)p.act++;});
+var dead=D.P.map(function(p){return p.act>=3;});D.phase="res";if(dead[0]||dead[1]){D.phase="end";D.win=dead[0]&&dead[1]?-2:dead[1]?0:1;}}
+function dAfterRes(){var D=DUEL;dRender();if(D.phase==="end"){dReward();return;}if(D.mode==="host")DT.next=setTimeout(dNextQ,7000);}
+function dReward(){var D=DUEL,d=dStats(),won=D.win===D.me,draw=D.win===-2,amt;if(D.rewarded)return;D.rewarded=true;
+if(D.mode==="cpu"){amt=won?DLV[D.lv][5]:5;if(won)d.w++;else if(!draw)d.l++;}else{amt=won?50:10;if(won)d.ow++;else if(!draw)d.ol++;}
+if(won){d.st++;if(d.st>d.best)d.best=d.st;}else if(!draw)d.st=0;earn(amt);save();refreshHud();checkBadges();
+var r=document.querySelector("#ufDuel .du-rew");if(r)r.textContent="+"+amt+" Taler";if(D.mode!=="cpu"){var oc=DCONN,op=DPEER;setTimeout(function(){dNetClose(oc,op);},1500);}}
+function duelAbort(){if(!DUEL)return;dClear();if(DUEL.mode!=="cpu"){dSend({type:"bye"});var oc=DCONN,op=DPEER;DCONN=null;DPEER=null;DCODE="";setTimeout(function(){dNetClose(oc,op);},300);}DUEL=null;renderDuel();}
+/* --- Darstellung --- */
+function dCard(p,side){var id=p.team[Math.min(p.act,2)],c=TCGM[id],T=TCOL[c[2]],hp=p.hp[Math.min(p.act,2)],max=c[3],pct=Math.max(0,hp/max*100);
+return '<div class="du-card'+(p.act>=3?' ko':'')+'" data-side="'+side+'" style="--tc:'+T[0]+'"><div class="du-art">'+artSvg(c,"du-pic")+'</div><div class="du-info"><span class="du-pn">'+esc(p.name)+'</span><b>'+esc(c[1])+'</b><div class="du-hp"><i style="width:'+pct+'%;background:'+(pct>50?"#3ddc97":pct>25?"#ffd23f":"#ff6b6b")+'"></i></div><span class="du-kp">'+hp+' / '+max+' KP</span><span class="du-dots">'+p.team.map(function(t,i){return '<i class="'+(p.hp[i]<=0?"ko":i===p.act?"on":"")+'" title="'+esc(TCGM[t][1])+'"></i>';}).join("")+'</span></div></div>';}
+function dEvHtml(e){var c=TCGM[e.id],a=c[6][e.atk];return '<div class="du-ev" style="--tc:'+TCOL[c[2]][0]+'"><div class="du-evh"><b>'+esc(c[1])+'</b> setzt <b>'+esc(a[0])+'</b> ein – <span class="du-dmg">'+e.dmg+' Schaden</span>'+(e.ko?' <span class="du-ko">K.O.!</span>':'')+'</div><div class="du-lern"><span>Lernstoff</span>'+a[2]+'</div></div>';}
+function dRender(){var box=document.getElementById("ufDuel");if(!box||!DUEL)return;var D=DUEL,me=D.me,op=1-me,h='<div class="du">';
+h+='<div class="du-top"><span class="du-round">'+(D.round?'Runde '+D.round:'Kartenduell')+'</span><span class="du-mode">'+(D.mode==="cpu"?"gegen "+esc(D.P[1].name):"Online-Duell")+'</span></div>';
+h+='<div class="du-field"><div class="du-side opp'+(D.phase!=="q"&&D.ev.some(function(e){return e.s===me;})?' hit':'')+'">'+dCard(D.P[op],"opp")+(D.phase==="q"?'<span class="du-opp-st">'+(D.mode!=="cpu"&&D.ans[op]?"hat geantwortet":"denkt nach …")+'</span>':'')+'</div><div class="du-vs">VS</div><div class="du-side me'+(D.phase!=="q"&&D.ev.some(function(e){return e.s===op;})?' hit':'')+'">'+dCard(D.P[me],"me")+'</div></div>';
+if(D.phase==="intro")h+='<div class="du-mid"><p class="du-big">Teams stehen bereit … Los geht\'s!</p><p class="small">Antworte richtig und schneller als dein Gegner, dann greift deine aktive Karte an. Unter 8 Sekunden gibt es die <b>starke Attacke</b>. Sind beide richtig, kontert der Langsamere mit halbem Schaden.</p></div>';
+if(D.phase==="q"){var q=dPool()[D.q];h+='<div class="du-mid"><div class="du-timer"><i></i></div><span class="du-sec">20 s</span><p class="du-q">'+q.q+'</p><div class="du-opts">'+q.o.map(function(o,i){return '<button class="du-o" data-dj="'+i+'"'+(D.myAns!=null?' disabled':'')+'>'+o+'</button>';}).join("")+'</div><p class="du-wait small">'+(D.myAns!=null?"Antwort eingeloggt – warte auf den Gegner …":"Schnell sein lohnt sich!")+'</p></div>';}
+if(D.phase==="res"||D.phase==="end"){var q2=dPool()[D.q],a=D.ans,mine=a[me],theirs=a[op],okM=mine&&mine.j===q2.c,okT=theirs&&theirs.j===q2.c;
+h+='<div class="du-mid"><p class="du-q">'+q2.q+'</p><p class="du-right">Richtig: <b>'+q2.o[q2.c]+'</b></p><div class="du-who"><span class="'+(okM?"ok":"no")+'">Du: '+(mine&&mine.j>=0?(okM?"richtig":"falsch")+" ("+(mine.t/1000).toFixed(1)+" s)":"keine Antwort")+'</span><span class="'+(okT?"ok":"no")+'">'+esc(D.P[op].name)+': '+(theirs&&theirs.j>=0?(okT?"richtig":"falsch")+" ("+(theirs.t/1000).toFixed(1)+" s)":"keine Antwort")+'</span></div>'+
+(D.ev.length?D.ev.map(dEvHtml).join(""):'<p class="du-big">Beide daneben – keiner greift an!</p>')+'<details class="du-exp"'+(okM?'':' open')+'><summary>Erklärung zur Frage</summary><p>'+q2.e+'</p></details>';
+if(D.phase==="end"){var won=D.win===me,draw=D.win===-2;h+='<div class="du-end '+(won?"win":draw?"draw":"lose")+'"><b>'+(won?"Sieg! 🏆":draw?"Unentschieden!":"Niederlage …")+'</b><span class="du-rew"></span><p class="small">'+(won?"Deine Karten waren stärker – und du schneller!":draw?"Beide Teams sind gleichzeitig K.O. gegangen.":"Kopf hoch: Die Erklärungen oben sind genau der Stoff, der in der Klausur kommt.")+'</p><div class="du-btns">'+(D.mode==="cpu"?'<button class="btn-p" data-da="again">Revanche</button>':'')+'<button class="btn-x" data-da="close">Zurück zur Übersicht</button></div></div>';}
+else if(D.mode==="cpu")h+='<button class="btn-p du-next" data-da="next">Nächste Runde</button>';else h+='<p class="small du-auto">Nächste Runde startet gleich …</p>';
+h+='</div>';}
+box.innerHTML=h+'</div>';if(D.phase==="q"){var b=document.querySelector("#ufDuel .du-timer i");if(b)b.style.width=(Math.max(0,DQ_TIME-(Date.now()-D.qStart))/DQ_TIME*100)+"%";}}
+/* --- Online per Raumcode (PeerJS, nur selbst gehostet) --- */
+var DCH="ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+function dCode(){var s="";for(var i=0;i<5;i++)s+=DCH[Math.floor(Math.random()*DCH.length)];return s;}
+function dStatus(h,cls){var e=root.querySelector("#ufDuelOn");if(e){e.innerHTML=h;e.className="du-status "+(cls||"");}}
+function dLoadPeer(cb){if(window.Peer)return cb(true);var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js";s.onload=function(){cb(!!window.Peer);};s.onerror=function(){cb(false);};document.head.appendChild(s);}
+function dNetClose(c,p){var oc=c||DCONN,op=p||DPEER;try{if(oc)oc.close();}catch(e){}try{if(op)op.destroy();}catch(e){}if(!c||c===DCONN){DCONN=null;DPEER=null;DCODE="";}}
+function dName(){var i=root.querySelector("#ufDuelName"),d=dStats();if(i){d.nm=(i.value||"").replace(/[<>]/g,"").trim().slice(0,16);save();}return d.nm||"Spieler";}
+function dHost(){var nm=dName();dNetClose();dStatus("Verbinde mit dem Vermittlungsdienst …");dLoadPeer(function(ok){if(!ok){dStatus("Der Online-Dienst konnte nicht geladen werden. Prüfe deine Internetverbindung.","err");return;}
+DCODE=dCode();try{DPEER=new Peer("klr-uf-duell-"+DCODE);}catch(e){dStatus("Online-Duelle werden von diesem Browser nicht unterstützt.","err");return;}
+DPEER.on("open",function(){dStatus('<span class="small">Dein Raumcode</span><b class="du-code">'+DCODE+'</b><span class="small">Schick den Code deinem Gegner. Sobald er beitritt, startet das Duell.</span><button class="btn-x" data-da="copy">Code kopieren</button><button class="btn-x" data-da="cancel">Abbrechen</button>',"wait");});
+DPEER.on("connection",function(c){if(DCONN){try{c.close();}catch(e){}return;}DCONN=c;dWire("host",nm);});
+DPEER.on("error",function(e){dStatus("Verbindungsfehler ("+esc(e&&e.type||"unbekannt")+"). Versuch es nochmal.","err");});});}
+function dJoin(){var nm=dName(),inp=root.querySelector("#ufDuelCode"),code=(inp&&inp.value||"").toUpperCase().replace(/[^A-Z0-9]/g,"");if(code.length!==5){dStatus("Bitte gib den 5-stelligen Raumcode ein.","err");return;}
+dNetClose();dStatus("Suche Raum "+code+" …");dLoadPeer(function(ok){if(!ok){dStatus("Der Online-Dienst konnte nicht geladen werden. Prüfe deine Internetverbindung.","err");return;}
+try{DPEER=new Peer();}catch(e){dStatus("Online-Duelle werden von diesem Browser nicht unterstützt.","err");return;}
+DPEER.on("open",function(){DCONN=DPEER.connect("klr-uf-duell-"+code,{reliable:true});dWire("guest",nm);});
+DPEER.on("error",function(e){dStatus(e&&e.type==="peer-unavailable"?"Raum "+code+" nicht gefunden. Code richtig? Ist der Ersteller noch online?":"Verbindungsfehler ("+esc(e&&e.type||"unbekannt")+").","err");});});}
+function dWire(role,nm){var team=dTeam(),myC=DCONN,myP=DPEER;DCONN.on("open",function(){dSend({type:"hello",v:1,name:nm,team:team});dStatus("Verbunden! Warte auf den Start …","ok");});
+DCONN.on("data",function(m){if(myC===DCONN)dMsg(role,nm,team,m);});
+DCONN.on("close",function(){if(myC!==DCONN){dNetClose(myC,myP);return;}if(DUEL&&DUEL.mode!=="cpu"&&DUEL.phase!=="end"){dClear();DUEL.phase="end";DUEL.win=DUEL.me;DUEL.gone=true;var b=document.getElementById("ufDuel");if(b)b.innerHTML='<div class="du"><div class="du-end draw"><b>Verbindung getrennt</b><p class="small">Dein Gegner hat das Duell verlassen oder die Verbindung ist abgebrochen. Ohne Ergebnis gibt es keine Taler.</p><div class="du-btns"><button class="btn-x" data-da="close">Zurück zur Übersicht</button></div></div></div>';DUEL.rewarded=true;}dNetClose(myC,myP);if(!DUEL)dStatus("Verbindung getrennt.","err");});}
+function dValidTeam(t){return Array.isArray(t)&&t.length===3&&t.every(function(id){return TCGM[id];});}
+function dMsg(role,nm,team,m){if(!m||typeof m!=="object")return;
+if(role==="host"){if(m.type==="hello"&&!DUEL){var gt=dValidTeam(m.team)?m.team:dTeam();DUEL={mode:"host",me:0,P:[dPlayer(nm,team),dPlayer(String(m.name||"Gegner").slice(0,16),gt)],round:0,q:-1,ans:[null,null],ev:[],phase:"intro",win:-1,used:[]};dSend({type:"start",D:dSnap()});openModal('<div id="ufDuel"></div>');dRender();DT.next=setTimeout(dNextQ,2500);}
+else if(m.type==="ans"&&DUEL&&DUEL.phase==="q"&&m.round===DUEL.round&&!DUEL.ans[1]){DUEL.ans[1]={j:+m.j,t:Math.min(DQ_TIME,Math.max(0,+m.t||DQ_TIME))};var w=document.querySelector("#ufDuel .du-opp-st");if(w)w.textContent="hat geantwortet";dMaybeResolve();}
+else if(m.type==="bye"&&DCONN)DCONN.close();return;}
+if(m.type==="start"){DUEL=m.D;DUEL.mode="guest";DUEL.me=1;openModal('<div id="ufDuel"></div>');dRender();}
+else if(m.type==="q"&&DUEL){dClear();DUEL.round=m.round;DUEL.q=m.q;DUEL.ans=[null,null];DUEL.ev=[];DUEL.phase="q";dBeginQ();}
+else if(m.type==="res"&&DUEL){dClear();var keep={mode:"guest",me:1,qStart:DUEL.qStart,myAns:DUEL.myAns};DUEL=m.D;for(var k in keep)DUEL[k]=keep[k];dAfterRes();}
+else if(m.type==="bye"&&DCONN)DCONN.close();}
+/* --- Übersicht --- */
+function duelHtml(){var d=dStats(),team=dTeam(),own=ownedIds(),h='<div class="rtop"><span class="coinchip">Taler <b class="rco">'+coins()+'</b></span><span class="chip">Siege <b>'+(d.w+d.ow)+'</b></span><span class="chip">Niederlagen <b>'+(d.l+d.ol)+'</b></span><span class="chip">Serie <b>'+d.st+'</b> (beste '+d.best+')</span></div>';
+h+='<h3>Dein Team</h3><div class="du-team">'+team.map(function(id,i){var c=TCGM[id];return '<div class="du-slot">'+retroMini(c,0).replace('data-ca="view"','data-dslot="'+i+'"')+(dLoan(id)?'<span class="du-loan">Leihkarte</span>':'')+'</div>';}).join("")+'</div>';
+h+='<p class="small">'+(own.length<3?'Du hast erst '+own.length+' Karte'+(own.length===1?'':'n')+' – freie Plätze füllen <b>Leihkarten</b>. Öffne Booster unter „Sammelkarten“ für dein eigenes Team!':'Tipp auf eine Karte unten, um sie ins Team zu holen. Ein Team hat 3 Karten; die erste kämpft zuerst.')+'</p>';
+if(own.length)h+='<details class="du-pick"'+(own.length>3?'':' open')+'><summary>Team ändern ('+own.length+' Karten)</summary><div class="du-grid">'+own.map(function(id){var c=TCGM[id],on=team.indexOf(id);return '<button class="du-pc'+(on>=0?' on':'')+'" data-dpick="'+id+'" style="--tc:'+TCOL[c[2]][0]+'">'+artSvg(c,"du-pcart")+'<b>'+esc(c[1])+'</b><span>'+c[3]+' KP'+(on>=0?' · Platz '+(on+1):'')+'</span></button>';}).join("")+'</div><button class="btn-x" data-da="rand">Zufälliges Team</button></details>';
+h+='<h3>Gegen den Computer</h3><div class="du-lv">'+DLV.map(function(l,i){return '<button class="du-lvb" data-dcpu="'+i+'"><b>'+l[1]+'</b><span>'+Math.round(l[2]*100)+' % Trefferquote</span><span class="du-pr">Sieg: +'+l[5]+' Taler</span></button>';}).join("")+'</div>';
+h+='<h3>Online-Duell</h3>';
+if(!ONLINE)h+='<div class="tip">Online-Duelle funktionieren nur in der <b>selbst gehosteten Version (GitHub)</b>, weil sich die beiden Geräte direkt miteinander verbinden. Hier im Vorschau-Link kannst du gegen den Computer üben.</div>';
+else h+='<div class="du-online"><label class="lab" for="ufDuelName">Dein Anzeigename (kein Login nötig)</label><input id="ufDuelName" maxlength="16" value="'+esc(d.nm)+'" placeholder="z. B. Sarah" autocomplete="off"><div class="du-onbtns"><button class="btn-p" data-da="host">Duell erstellen</button><span class="small">oder</span><input id="ufDuelCode" maxlength="5" placeholder="CODE" autocomplete="off" autocapitalize="characters"><button class="btn-x" data-da="join">Beitreten</button></div><div id="ufDuelOn" class="du-status"></div><p class="small">Sieg online: +50 Taler, Niederlage: +10 Taler. Für den Verbindungsaufbau wird der kostenlose Dienst PeerJS genutzt; danach sprechen die Geräte direkt miteinander. Manche Schul- oder Firmen-WLANs blockieren das – dann über mobile Daten versuchen.</p></div>';
+h+='<h3>Regeln</h3><ol class="small"><li>Jede Runde bekommen beide dieselbe Quizfrage (20 Sekunden).</li><li>Wer richtig <b>und</b> schneller antwortet, greift mit seiner aktiven Karte an – unter 8 Sekunden mit der starken (zweiten) Attacke.</li><li>Sind beide richtig, kontert der Langsamere mit halbem Schaden.</li><li>Fällt eine Karte auf 0 KP, kommt die nächste. Wer alle 3 Karten verliert, verliert das Duell.</li><li>Jede Attacke zeigt ihren Lernstoff – so lernst du beim Kämpfen.</li></ol>';
+return h;}
+function renderDuel(){var b=root.querySelector("#ufDuelBox");if(!b)return;var y=window.pageYOffset,st=root.querySelector("#ufDuelOn"),keep=st?st.outerHTML:"",code=root.querySelector("#ufDuelCode"),cv=code?code.value:"";b.innerHTML=duelHtml();if(keep&&DPEER){var ns=root.querySelector("#ufDuelOn");if(ns)ns.outerHTML=keep;}var nc=root.querySelector("#ufDuelCode");if(nc)nc.value=cv;window.scrollTo(0,y);}
+root.addEventListener("click",function(ev){var t=ev.target,b;if(!t.closest)return;
+if((b=t.closest("#ufDuel [data-dj]"))){dAnswer(+b.getAttribute("data-dj"));return;}
+if((b=t.closest("[data-dcpu]"))){duelStartCpu(+b.getAttribute("data-dcpu"));return;}
+if((b=t.closest("[data-dpick]"))){var d=dStats(),id=b.getAttribute("data-dpick"),team=dTeam(),i=team.indexOf(id);if(i>=0){team.splice(i,1);}else{team=team.filter(function(x){return !dLoan(x);});if(team.length>=3)team.shift();team.push(id);}d.team=team;save();renderDuel();return;}
+if((b=t.closest("[data-dslot]"))){return;}
+if((b=t.closest("[data-da]"))){var a=b.getAttribute("data-da");
+if(a==="next"){dNextQ();return;}
+if(a==="again"){var lv=DUEL?DUEL.lv:0;DUEL=null;duelStartCpu(lv);return;}
+if(a==="close"){closeModal();return;}
+if(a==="rand"){var own=shuffle(ownedIds().slice());dStats().team=own.slice(0,3);save();renderDuel();return;}
+if(a==="host"){dHost();return;}if(a==="join"){dJoin();return;}
+if(a==="cancel"){dNetClose();dStatus("Abgebrochen.");return;}
+if(a==="copy"){try{navigator.clipboard.writeText(DCODE).then(function(){toastAlways("Code kopiert: <b>"+DCODE+"</b>");},function(){toastAlways("Dein Code: <b>"+DCODE+"</b>");});}catch(e){toastAlways("Dein Code: <b>"+DCODE+"</b>");}return;}}});
+root.addEventListener("keydown",function(ev){if(ev.key==="Enter"&&ev.target.id==="ufDuelCode")dJoin();});
+function duelPanel(){PANELS.push({id:"duell",tab:"Kartenduell",html:'<h2>Kartenduell</h2><div class="intro">Kämpfe mit deinen gesammelten Karten im <b>Quiz-Modus</b>: Wer richtig und schneller antwortet, greift an – und jede Attacke zeigt dir Lernstoff. Gegen den Computer oder online gegen deine Mitschüler, ganz ohne Login.</div><div id="ufDuelBox"></div>'});}
 /* ===== Zustand ===== */
 var KEY="uf-klr-v1",S;
-function fresh(){return {t:{},q:{},g:{},c:{},f:{},xp:0,st:0,bst:0,b:{},gm:true,mm:0,lz:{},hp:false,co:0,hpd:0,mon:true,hpc:null,room:null,inv:{},cards:{},pk:0};}
+function fresh(){return {t:{},q:{},g:{},c:{},f:{},xp:0,st:0,bst:0,b:{},gm:true,mm:0,lz:{},hp:false,co:0,hpd:0,mon:true,duel:null,hpc:null,room:null,inv:{},cards:{},pk:0};}
 S=fresh();try{var raw=JSON.parse(localStorage.getItem(KEY)||"null");if(raw&&typeof raw==="object"){for(var k in S)if(raw[k]!=null)S[k]=raw[k];if(raw.co==null)S.co=S.xp||0;}}catch(e){}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 var LV=[[0,"Neuling"],[100,"Kassen-Azubi"],[250,"Kalkulations-Lehrling"],[450,"Kostenstellen-Kenner"],[700,"BAB-Baumeister"],[1000,"Deckungsbeitrags-Profi"],[1400,"Controlling-Ass"],[1900,"Risiko-Radar"],[2500,"KLR-Meister"],[3200,"Legende der Unternehmensführung"]];
 function lvl(xp){var i=0;while(i+1<LV.length&&xp>=LV[i+1][0])i++;return i;}
-var BADGES=[["first","Erste Rechnung","eine Rechenaufgabe komplett richtig","1"],["calc5","Rechenkünstler","5 verschiedene Rechenaufgaben gelöst","5"],["bep","Break-even-Boss","Break-even-Aufgabe gelöst","BE"],["bab","BAB-Baumeister","HKZ, BAB, Anbau und Stufenleiter gelöst","BAB"],["kalk","Kalkulations-Kaiser","Vorwärts, Rückwärts und Differenz gelöst","€"],["db","Deckungsbeitrags-Held","alle Teilkosten-Aufgaben gelöst","DB"],["calcAll","Rechentrainer komplett","alle Rechenaufgaben gelöst","★"],["s5","Fünfer-Serie","5 richtige Antworten in Folge","5×"],["s15","Unaufhaltsam","15 richtige Antworten in Folge","15"],["quiz","Perfektes Quiz","ein Kapitel-Quiz mit 100 %","Q"],["mem3","Zuordnungs-Profi","3 Zuordnen-Spiele geschafft","Z"],["run3","Jump'n'Run-Held","3 Jump'n'Run-Level geschafft","JR"],["sort3","Sortier-Profi","3 Sortierspiele gewonnen","S"],["cards","Karteikarten-Fan","20 Karteikarten ab Fach 3","K"],["sammler","Sammler","15 verschiedene Sammelkarten","SK"],["album","Volles Album","alle Sammelkarten gesammelt","★★"],["deko","Innenarchitekt","10 Dinge im Lernzimmer aufgestellt","LZ"],["risk","Risiko-Radar","Risikomanagement zu 80 % gelernt","R"],["ready","Klausurbereit","Gesamtfortschritt 90 %","A+"]];
+var BADGES=[["first","Erste Rechnung","eine Rechenaufgabe komplett richtig","1"],["calc5","Rechenkünstler","5 verschiedene Rechenaufgaben gelöst","5"],["bep","Break-even-Boss","Break-even-Aufgabe gelöst","BE"],["bab","BAB-Baumeister","HKZ, BAB, Anbau und Stufenleiter gelöst","BAB"],["kalk","Kalkulations-Kaiser","Vorwärts, Rückwärts und Differenz gelöst","€"],["db","Deckungsbeitrags-Held","alle Teilkosten-Aufgaben gelöst","DB"],["calcAll","Rechentrainer komplett","alle Rechenaufgaben gelöst","★"],["s5","Fünfer-Serie","5 richtige Antworten in Folge","5×"],["s15","Unaufhaltsam","15 richtige Antworten in Folge","15"],["quiz","Perfektes Quiz","ein Kapitel-Quiz mit 100 %","Q"],["mem3","Zuordnungs-Profi","3 Zuordnen-Spiele geschafft","Z"],["run3","Jump'n'Run-Held","3 Jump'n'Run-Level geschafft","JR"],["sort3","Sortier-Profi","3 Sortierspiele gewonnen","S"],["cards","Karteikarten-Fan","20 Karteikarten ab Fach 3","K"],["sammler","Sammler","15 verschiedene Sammelkarten","SK"],["album","Volles Album","alle Sammelkarten gesammelt","★★"],["deko","Innenarchitekt","10 Dinge im Lernzimmer aufgestellt","LZ"],["duell","Duellant","erstes Kartenduell gewonnen","VS"],["risk","Risiko-Radar","Risikomanagement zu 80 % gelernt","R"],["ready","Klausurbereit","Gesamtfortschritt 90 %","A+"]];
 function solved(ids){return ids.every(function(i){return S.c[i]>0;});}
 function countG(prefix){var n=0;for(var k in S.g)if(S.g[k]&&k.indexOf(prefix)>=0)n++;return n;}
 function checkBadges(){var got=[];function a(id,cond){if(cond&&!S.b[id]){S.b[id]=1;got.push(id);}}
 var nc=Object.keys(S.c).filter(function(k){return S.c[k]>0;}).length,known=0;for(var f in S.f)if(S.f[f]>=3)known++;
 a("first",nc>=1);a("calc5",nc>=5);a("bep",solved(["bep"]));a("bab",solved(["hkz","bab","anbau","stufen"]));a("kalk",solved(["vorwaerts","rueckwaerts","differenz"]));a("db",solved(["dbEin","dbMehr","pug","engpass","vollteil"]));a("calcAll",solved(Object.keys(CALCS)));
 a("s5",S.bst>=5);a("s15",S.bst>=15);a("quiz",Object.keys(S.q).some(function(k){return k!=="final"&&S.q[k]>=1;}));a("mem3",countG("-mem")>=3);a("run3",countG("-run")>=3);a("sort3",countG("-sort")>=3);a("cards",known>=20);
-var rm=MODS.filter(function(m){return m.id==="rm";})[0];a("risk",rm&&modStats(rm).pct>=80);a("ready",overall()>=90);a("sammler",nCards()>=15);a("album",nCards()>=TCG.length);a("deko",S.room&&S.room.it&&S.room.it.length>=10);
+var rm=MODS.filter(function(m){return m.id==="rm";})[0];a("risk",rm&&modStats(rm).pct>=80);a("ready",overall()>=90);a("sammler",nCards()>=15);a("duell",S.duel&&(S.duel.w+S.duel.ow)>=1);a("album",nCards()>=TCG.length);a("deko",S.room&&S.room.it&&S.room.it.length>=10);
 got.forEach(function(id){var b=BADGES.filter(function(x){return x[0]===id;})[0];toast("Abzeichen freigeschaltet: <b>"+b[1]+"</b>",true);});if(got.length)save();}
 function addXP(n,why){if(!n)return;var before=lvl(S.xp);S.xp+=n;earn(n);save();toast("+"+n+" XP"+(why?" · "+why:""));var after=lvl(S.xp);if(after>before)toast("Level "+(after+1)+" erreicht: <b>"+LV[after][1]+"</b>",true);refresh();}
 function streak(ok){if(typeof monCount==="function")monCount(ok);if(ok){S.st++;if(S.st>S.bst)S.bst=S.st;if(S.st>0&&S.st%5===0)toast("Serie: "+S.st+" richtige Antworten in Folge!",true);}else S.st=0;save();refreshHud();}
@@ -2030,17 +2233,17 @@ h+=quizHtml(m.quiz,m.id);PANELS.push({id:m.id,tab:m.tab,html:h,mod:1});});
 (function(){var h='<h2>Rechentrainer</h2><div class="intro">Alle Rechenaufgaben an einem Ort – jede mit „Neue Zahlen“ beliebig oft wiederholbar. Gelöste Aufgaben zählen zum Fortschritt des jeweiligen Kapitels.</div><div class="calcfilter"><button class="on" data-cf="all">Alle</button>';MODS.forEach(function(m){if(m.calcs&&m.calcs.length)h+='<button data-cf="'+m.id+'">'+m.tab+'</button>';});h+='<button class="btn-x c-random" style="margin-left:auto">Zufallsaufgabe</button></div><div id="ufRandom"></div><div id="ufCalcList">';
 Object.keys(CALCS).forEach(function(id){h+='<div data-cm="'+CALCS[id].m+'">'+calcHtml(id,false)+'</div>';});h+='</div>';PANELS.push({id:"rechnen",tab:"Rechentrainer",html:h});})();
 PANELS.push({id:"quiz",tab:"Abschlussquiz",html:'<h2>Abschlussquiz</h2><div class="intro">15 zufällige Fragen aus allen Kapiteln und dem Risikomanagement. „Neue Fragen“ mischt neu.</div><div id="ufFinal"></div><button class="btn-x" id="ufNewFinal">Neue Fragen</button>'});
-roomPanels();hpShopPanel();
+roomPanels();hpShopPanel();duelPanel();
 (function(){var h='<h2>Glossar</h2><div class="intro">Alle Abkürzungen und Fachbegriffe auf einen Blick.</div><label class="lab" for="ufSearch">Suchen</label><input id="ufSearch" class="search" type="search" placeholder="z. B. HKZ oder Wagnis"><h3>Abkürzungen</h3><dl class="gl">';Object.keys(ABBR).sort(function(a,b){return a.toLowerCase()<b.toLowerCase()?-1:1;}).forEach(function(k){h+='<dt>'+esc(k)+'</dt><dd>'+esc(ABBR[k])+'</dd>';});h+='</dl><h3>Fachbegriffe</h3><dl class="gl">';GLOSS.forEach(function(g){h+='<dt>'+g[0]+'</dt><dd>'+ab(g[1])+'</dd>';});PANELS.push({id:"glossar",tab:"Glossar",html:h+'</dl>'});})();
 function buildFinal(){var pool=[];MODS.forEach(function(m){pool=pool.concat(m.quiz);});root.querySelector("#ufFinal").innerHTML=quizHtml(shuffle(pool).slice(0,15),"final");}
 var tabs=root.querySelector("#ufTabs"),pans=root.querySelector("#ufPanels"),th="",ph="";
-PANELS.forEach(function(p){th+='<button role="tab" data-p="'+p.id+'" aria-selected="false"'+(p.id==="zimmer"||p.id==="karten"||p.id==="hpshop"?' class="g-only"':'')+'>'+p.tab+(p.mod?'<span class="pc">0%</span>':'')+'</button>';ph+='<section class="panel" role="tabpanel" data-p="'+p.id+'">'+p.html+'</section>';});tabs.innerHTML=th;pans.innerHTML=ph;
+PANELS.forEach(function(p){th+='<button role="tab" data-p="'+p.id+'" aria-selected="false"'+(p.id==="zimmer"||p.id==="karten"||p.id==="hpshop"||p.id==="duell"?' class="g-only"':'')+'>'+p.tab+(p.mod?'<span class="pc">0%</span>':'')+'</button>';ph+='<section class="panel" role="tabpanel" data-p="'+p.id+'">'+p.html+'</section>';});tabs.innerHTML=th;pans.innerHTML=ph;
 var modal=document.createElement("div");modal.className="modal";modal.hidden=true;modal.setAttribute("role","dialog");modal.setAttribute("aria-modal","true");modal.innerHTML='<div class="mbox"><button class="mclose" aria-label="Schließen">×</button><div class="mc"></div></div>';root.appendChild(modal);
 var fab=document.createElement("button");fab.className="fab";fab.textContent="Karteikasten";root.appendChild(fab);
 var tip=document.createElement("div");tip.id="ufTip";tip.hidden=true;document.body.appendChild(tip);
 function openModal(h){if(HP.el&&S.hp){HP.min=true;HP.el.classList.add("min");}var mp=root.querySelector(".mpop");if(mp)mp.hidden=true;modal.querySelector(".mc").innerHTML=h;modal.hidden=false;fab.hidden=true;modal.scrollTop=0;setTimeout(function(){modal.querySelector(".mclose").focus();},30);}
-function closeModal(){if(RUN)lastRunM=RUN.m;stopRun();modal.hidden=true;fab.hidden=false;game=null;refresh();}
-function show(id){if(typeof helpyTab==="function"&&S.hp&&HP.el)helpyTab(id);root.querySelectorAll(".panel").forEach(function(p){p.classList.toggle("on",p.getAttribute("data-p")===id);});tabs.querySelectorAll("button").forEach(function(b){var on=b.getAttribute("data-p")===id;b.setAttribute("aria-selected",on?"true":"false");if(on&&b.scrollIntoView)try{b.scrollIntoView({block:"nearest",inline:"nearest"});}catch(e){}});try{sessionStorage.setItem(KEY+"-tab",id);}catch(e){}if(id==="zimmer")renderRoom();if(id==="karten")renderCards();if(id==="hpshop")renderHpShop();}
+function closeModal(){if(typeof duelAbort==="function"&&DUEL)duelAbort();if(RUN)lastRunM=RUN.m;stopRun();modal.hidden=true;fab.hidden=false;game=null;refresh();}
+function show(id){if(typeof helpyTab==="function"&&S.hp&&HP.el)helpyTab(id);root.querySelectorAll(".panel").forEach(function(p){p.classList.toggle("on",p.getAttribute("data-p")===id);});tabs.querySelectorAll("button").forEach(function(b){var on=b.getAttribute("data-p")===id;b.setAttribute("aria-selected",on?"true":"false");if(on&&b.scrollIntoView)try{b.scrollIntoView({block:"nearest",inline:"nearest"});}catch(e){}});try{sessionStorage.setItem(KEY+"-tab",id);}catch(e){}if(id==="zimmer")renderRoom();if(id==="karten")renderCards();if(id==="hpshop")renderHpShop();if(id==="duell")renderDuel();}
 /* ===== Spiele ===== */
 var game=null;function modBy(id){return MODS.filter(function(m){return m.id===id;})[0];}
 function win(gid,txt){var first=!S.g[gid];S.g[gid]=true;save();modal.querySelector(".wbox").innerHTML='<div class="win">'+txt+'</div>';addXP(first?25:5,"Spiel");checkBadges();}
@@ -2131,7 +2334,7 @@ root.addEventListener("focusin",function(ev){var a=ev.target.closest&&ev.target.
 root.addEventListener("focusout",function(ev){if(ev.target.closest&&ev.target.closest(".ab"))hideTip();});
 root.addEventListener("keydown",function(ev){if(ev.key==="Enter"&&ev.target.closest&&ev.target.closest(".fld input")){ev.preventDefault();calcCheck(ev.target.closest(".calc"));}});
 document.addEventListener("keydown",function(ev){if(modal.hidden)return;if(ev.key==="Escape"){closeModal();return;}if(fc.cur&&modal.querySelector(".fc")){if(ev.key===" "&&!(document.activeElement&&document.activeElement.tagName==="BUTTON"&&!document.activeElement.closest(".fc"))){ev.preventDefault();modal.querySelector(".fc").classList.toggle("flip");}else if(ev.key==="ArrowRight")rate(true);else if(ev.key==="ArrowLeft")rate(false);}});
-root.addEventListener("change",function(ev){var t=ev.target;if(t.id==="ufGame"){S.gm=t.checked;save();root.classList.toggle("nogame",!S.gm);var cur=root.querySelector(".panel.on");if(!S.gm&&cur&&/^(zimmer|karten|hpshop)$/.test(cur.getAttribute("data-p")))show("start");return;}if(t.id==="ufMemeSel"){setMeme(+t.value);return;}if(t.id==="ufHelpy"){setHelpy(t.checked);return;}if(t.classList&&t.classList.contains("lzcb")){var bl=t.closest(".lzb"),li=+bl.getAttribute("data-lz");if(!S.lz)S.lz={};var was2=!!S.lz[li];S.lz[li]=t.checked;bl.classList.toggle("done",t.checked);save();var dn=0;LZ.forEach(function(x,i){if(S.lz[i])dn++;});root.querySelector("#lzBar").style.width=Math.round(dn/LZ.length*100)+"%";root.querySelector("#lzPct").textContent=dn+"/"+LZ.length;if(t.checked&&!was2){addXP(10,"Block erledigt");if(dn===LZ.length)toast("Mut zur Lücke komplett – du bist bereit!",true);}return;}
+root.addEventListener("change",function(ev){var t=ev.target;if(t.id==="ufGame"){S.gm=t.checked;save();root.classList.toggle("nogame",!S.gm);var cur=root.querySelector(".panel.on");if(!S.gm&&cur&&/^(zimmer|karten|hpshop|duell)$/.test(cur.getAttribute("data-p")))show("start");return;}if(t.id==="ufMemeSel"){setMeme(+t.value);return;}if(t.id==="ufHelpy"){setHelpy(t.checked);return;}if(t.classList&&t.classList.contains("lzcb")){var bl=t.closest(".lzb"),li=+bl.getAttribute("data-lz");if(!S.lz)S.lz={};var was2=!!S.lz[li];S.lz[li]=t.checked;bl.classList.toggle("done",t.checked);save();var dn=0;LZ.forEach(function(x,i){if(S.lz[i])dn++;});root.querySelector("#lzBar").style.width=Math.round(dn/LZ.length*100)+"%";root.querySelector("#lzPct").textContent=dn+"/"+LZ.length;if(t.checked&&!was2){addXP(10,"Block erledigt");if(dn===LZ.length)toast("Mut zur Lücke komplett – du bist bereit!",true);}return;}
 var c=t.closest&&t.closest(".done-l");if(!c)return;var card=t.closest(".card"),id=card.getAttribute("data-t"),was=!!S.t[id];S.t[id]=t.checked;card.classList.toggle("done",t.checked);save();if(t.checked&&!was)addXP(5,"Thema gelernt");else refresh();checkBadges();});
 root.addEventListener("input",function(ev){if(ev.target.id!=="ufSearch")return;var v=ev.target.value.toLowerCase();root.querySelectorAll(".gl dt").forEach(function(dt){var dd=dt.nextElementSibling,hit=!v||(dt.textContent+" "+dd.textContent).toLowerCase().indexOf(v)>=0;dt.hidden=dd.hidden=!hit;});});
 })();
